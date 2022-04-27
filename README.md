@@ -1,2 +1,2 @@
-# Fabulous Project (AMOS SS 20xx)
+# IDunion blockchain dashboard (AMOS SS 2022)
 Something something something
