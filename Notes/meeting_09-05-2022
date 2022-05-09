@@ -1,0 +1,23 @@
+date: 09.05.2022
+members: {Marquart, Anna-Maria, Julian, Khai, Murali, Gaurav, David}
+note:
+	Implementation
+		set-up of own instance/network with nodes
+		IDunion: direct implementation on OS:ubuntu-18 (some 20): on-premis, Azure, AWS
+		Output of Siemens network: from hyperledger indy monitor
+		Sovrin/Ivon network
+	Display
+		Grafana: Tool Prometeus: processes the file
+	Information analysis:
+		Find out what information is possible to display, calculate;
+		Fetch validation (validator information), send transaction information;
+		track node availability
+		Reaction time of nodes
+		Type of node (e.g. AWS or Azure, native or container)
+		List ledgers and credentials of the ledgers
+	Information Preferences:
+		Load-information: read and write: Read is creating more load;
+		Statistics about the network: main node up-time
+		Transactions passed
+		Ledger explorer and monitor
+		Validator information
