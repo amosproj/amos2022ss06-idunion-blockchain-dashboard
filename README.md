@@ -1,4 +1,7 @@
 # IDunion blockchain dashboard (AMOS SS 2022)
+**Table of Contents**
+1. [Project Summary] (#project-summary)
+
 ## Project Summary
 The goal of the project is to develop a metrics engine and a dashboard for the IDunion blockchain.
 - The (UI-less) metrics engine
