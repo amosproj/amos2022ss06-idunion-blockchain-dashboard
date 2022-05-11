@@ -18,4 +18,4 @@ The goal of the project is to develop a metrics engine and a dashboard for the I
     - Can display events
 
 ## Software Architecture
-<img width="1313" alt="Bildschirmfoto 2022-05-10 um 18 08 56" src="https://user-images.githubusercontent.com/73983419/167785051-c35e75bd-4693-49d0-899a-8e77e9a5ce0e.png">
+![Software_Architecture_High_level](https://user-images.githubusercontent.com/73983419/167786311-3a55dbe2-7d1b-4db6-bf9c-58bed1cf2179.jpg)
