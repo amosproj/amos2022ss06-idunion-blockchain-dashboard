@@ -4,3 +4,7 @@ services:
     image: grafana/grafana-oss:8.5.0
     ports:
       - 3000:3000
+  prometheus
+    image: prometheus/prometheus
+    ports:
+      - 9090:9090
