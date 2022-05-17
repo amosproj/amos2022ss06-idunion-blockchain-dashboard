@@ -24,11 +24,6 @@ For more details see the Fetch Validator Status [readme](fetch-validator-status/
 - The code of this repository is forked from https://github.com/lynnbendixsen/indy-node-monitor (Lynn Bendixsen and contributors).
 The original README.md can be seen in README.orig.md.
 
-- The prometheus export function code has been adapted from the unmerged pull request #6:
-https://github.com/hyperledger/indy-node-monitor/pull/6 (Kevin Wittek)
-
-- The adaptation and bug fixes were done by Carlos Morra, Siemens AG.
-
 ## Installation and configuration: 
 See [setup](setup_IDUnion_node_monitoring.md) and [install indy vdr](install_indy-vdr.md).
 
