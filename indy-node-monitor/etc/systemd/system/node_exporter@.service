@@ -1,0 +1,13 @@
+[Unit]
+Description=”Node Exporter on port %i”
+After=network-online.target
+PartOf=node_exporters.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+ExecStart=/usr/local/bin/node_exporter --collector.textfile.directory /var/log/node_exporter/%i --web.listen-address=":%i"
+
+[Install]
+WantedBy=multi-user.target
