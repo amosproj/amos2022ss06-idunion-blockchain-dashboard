@@ -16,5 +16,5 @@ Clone repository with: git clone https://github.com/amosproj/amos2022ss06-idunio
 - Login with default account username: admin and default password: admin
 - Click configuration -> data source -> add data source
 - Choose Prometheus database
-- Paste the copied URL
+- Paste the copied URL in format http://URL:9090
 - Click save and test
