@@ -18,7 +18,7 @@ This is a simple tool that can be used to retrieve "validator-info"&mdash;detail
 - JSON array with a record per validator (default)
 - Prometheus format (with option -p)
 
-For more details see the Fetch Validator Status [readme](fetch-validator-status/README.md)
+For more details see the Fetch Validator Status [readme](fetch-validator-status/README.orig.md)
 
 ## Authors
 - The code of this repository is forked from https://github.com/lynnbendixsen/indy-node-monitor (Lynn Bendixsen and contributors).

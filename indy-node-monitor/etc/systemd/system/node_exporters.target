@@ -1,7 +1,6 @@
 [Unit]
 Description=Node Exporters
-Requires=node_exporter@9100.service  
+Requires=node_exporter@9100.service node_exporter@9101.service node_exporter@9102.service node_exporter@9103.service 
 
 [Install]
 WantedBy=multi-user.target
-

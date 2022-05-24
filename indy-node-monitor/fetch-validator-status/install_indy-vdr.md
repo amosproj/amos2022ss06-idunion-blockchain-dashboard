@@ -27,7 +27,7 @@ $ sudo ldconfig
 $ export LD_LIBRARY_PATH=/usr/local/lib
 ```
  
-- Install the python wrapper:
+- Install the python wrapper (this can be done in a virtual environment):
 ```
 $  cd Wrappers/Python
 $  pip3 install .
