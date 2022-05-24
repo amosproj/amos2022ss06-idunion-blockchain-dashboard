@@ -22,10 +22,21 @@ assignees: ''
 * The same for all features
 * Here goes the project specific part
 
-## DoD general criteria
+## Feature DoD 
+* Feature has been fully implemented
+* All acceptance criteria were met
+* All tests are passing
+* No known errors
+* Documentation updated
+* Bill of materials updated
+
+## Sprint Release DoD
 * Feature has been fully implemented
 * Feature has been merged into the mainline
 * All acceptance criteria were met
 * Product owner approved features
 * All tests are passing
+* Peer code review passed
 * Developers agreed to release
+* Documentation updated
+* Bill of materials updated
