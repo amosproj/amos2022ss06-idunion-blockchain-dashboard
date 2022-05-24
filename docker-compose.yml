@@ -1,10 +1,17 @@
 version: "3.7"
 services:
   grafana:
+    #    network_mode: host
     image: grafana/grafana-oss:8.5.0
     ports:
       - 3000:3000
+    volumes:
+       - ./data:/var/lib/grafana
+       
   prometheus:
+    #    network_mode: host
     image: prom/prometheus:v2.35.0
     ports:
       - 9090:9090
+    volumes:
+       - /mnt/sda2/FAU_masters/sem4/amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml 
