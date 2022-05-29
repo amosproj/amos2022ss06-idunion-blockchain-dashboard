@@ -69,8 +69,12 @@ def _get_metrics_live(GENESIS_URL, SEED):
     try:
         my_env = os.environ.copy()
         my_env["GENESIS_URL"] =  GENESIS_URL
-        my_env["SEED"] = SEED  
-        proc = subprocess.Popen(["/mnt/sda2/FAU_masters/sem4/amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/fetch-validator-status/run.sh"],env=my_env,cwd=r'/mnt/sda2/FAU_masters/sem4/amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/fetch-validator-status',stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        my_env["SEED"] = SEED
+        dir_path = os.getcwd()
+        dir_path -= "/grafana/dashboards/utils"
+        dir_path += "/fetch-validator-status/run.sh"  
+        # proc = subprocess.Popen(["/mnt/sda2/FAU_masters/sem4/amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/fetch-validator-status/run.sh"],env=my_env,cwd=r'/mnt/sda2/FAU_masters/sem4/amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/fetch-validator-status',stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        proc = subprocess.Popen([dir_path],env=my_env,cwd=dir_path,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         ret = proc.communicate(timeout=100)
         if proc.returncode != 0:
             sys.stderr.write("ERROR occured running validator command\n")
