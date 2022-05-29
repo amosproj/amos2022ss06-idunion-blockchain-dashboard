@@ -7,10 +7,7 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
-    volumes:
-      - type: bind
-        source: ./data/grafana
-        target: /grafana/static-data
+       
   prometheus:
     #    network_mode: host
     image: prom/prometheus:v2.35.0
