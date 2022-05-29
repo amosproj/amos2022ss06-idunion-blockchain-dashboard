@@ -19,7 +19,7 @@ services:
     ports:
       - 9090:9090
     volumes:
-       - /indy-node-monitor/etc/prometheus/prometheus.yml:/indy-node-monitor/etc/prometheus/prometheus.yml 
-       - type: bind
-          source: ./data/prometheus
-          target: /prometheus/static-data
+      - /indy-node-monitor/etc/prometheus/prometheus.yml:/indy-node-monitor/etc/prometheus/prometheus.yml 
+      - type: bind
+        source: ./data/prometheus
+        target: /prometheus/static-data
