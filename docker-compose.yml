@@ -7,10 +7,6 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
-    volumes:
-      - type: bind
-        source: ./data/grafana
-        target: /var/lib/grafana
        
   prometheus:
     #    network_mode: host
