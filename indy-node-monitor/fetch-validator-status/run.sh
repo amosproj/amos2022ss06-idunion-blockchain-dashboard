@@ -24,7 +24,7 @@ function runCmd() {
     _cmd+=" > ${LOG%.*}_`date +\%Y-\%m-\%d_%H-%M-%S`.json"
   fi
 
-  _cmd+=" > test.json"
+  _cmd+=" | tee ../../data/prometheus/test.json"
   eval ${_cmd}
   # echo
   # echo ${_cmd}
