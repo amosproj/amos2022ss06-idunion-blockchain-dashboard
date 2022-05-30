@@ -19,18 +19,7 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - /indy-node-monitor/etc/prometheus/prometheus.yml:/indy-node-monitor/etc/prometheus/prometheus.yml 
-      - type: bind
-        source: ./data/prometheus
-        target: /prometheus/static-data
-
-  node_exporter:
-    image: quay.io/prometheus/node-exporter:latest
-    container_name: node_exporter
-    command:
-      - '--path.rootfs=/host'
-    network_mode: host
-    pid: host
-    restart: unless-stopped
-    volumes:
-      - '/:/host:ro,rslave'
+      - ./indy-node-monitor/etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+#       - type: bind
+#         source: ./data/prometheus
+#         target: /prometheus/static-data
