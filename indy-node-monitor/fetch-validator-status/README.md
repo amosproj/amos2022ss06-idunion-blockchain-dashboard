@@ -6,10 +6,6 @@ The call can only be made by an entity with a suitably authorized DID on the led
 
 The easiest way to use this now is to use the `./fetch_status_prometheus.py` script.
 
-## Setup
-
-- Install indy-vdr following instructions from the [install_indy-vdr.md](install_indy-vdr.md) file
-
 ## How To Run
 
 Here is guidance of how you can run the script to get validator info about any accessible Indy network. We'll start with a test on local network (using [von-network](https://github.com/bcgov/von-network)) and provide how this can be run on any Indy network, including Sovrin networks.
@@ -49,6 +45,10 @@ When you are finished your running the validator tool (covered in the steps belo
 
 We'll remind you of that later in these instructions.
 
+### Install Indy-vdr
+Following the instructions from [install_indy-vdr.md](install_indy-vdr.md) to setup Indy-vdr.
+
+
 ### Clone the indy-node-monitor repo
 
 Run these commands to clone this repo so that you can run the fetch validator info command.
@@ -58,7 +58,6 @@ git clone https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard.
 cd amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/fetch-validator-status
 
 ```
-Install indy-vdr following instructions from the [install_indy-vdr.md](install_indy-vdr.md) file
 
 ### Run the Validator Info Script
 
