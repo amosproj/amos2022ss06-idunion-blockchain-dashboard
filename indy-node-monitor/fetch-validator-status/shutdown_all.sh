@@ -4,10 +4,10 @@ cd ../../..
 
 ## close von-network docker container
 cd von-network/
-#./manage down
+./manage down
 
 ## close grafana and prometheus docker container
-cd ../amos2022ss06*/
+cd ../amos2022ss06-idunion-blockchain-dashboard/
 docker-compose down &
 
 ## close node exporter

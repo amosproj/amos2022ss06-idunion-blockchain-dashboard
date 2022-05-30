@@ -5,7 +5,7 @@ function prom_data_loop() {
   while [[ ${counter} > 0 ]]
   do
     counter=$(( ${counter} - 1 ))
-    ./fetch_status_prometheus.py --genesis-url=http://172.17.0.1:9000/genesis --seed=000000000000000000000000Trustee1 -p | tee ../../data/prometheus/node_data.prom
+    python3 ./fetch_status_prometheus.py --genesis-url=http://172.17.0.1:9000/genesis --seed=000000000000000000000000Trustee1 -p | tee ../../data/prometheus/node_data.prom
     sleep 60
   done
 }
@@ -22,7 +22,7 @@ wait
 sleep 15
 
 ## building grafana and prometheus docker container
-cd ../amos2022ss06*/
+cd ../amos2022ss06-idunion-blockchain-dashboard
 docker-compose up &
 
 ## open the node exporter in another terminal for easy exit when necessary
