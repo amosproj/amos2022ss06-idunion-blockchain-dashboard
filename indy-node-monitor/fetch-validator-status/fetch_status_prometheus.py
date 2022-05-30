@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import asyncio
-#import base58
+import base58
 import base64
 import json
 import re
