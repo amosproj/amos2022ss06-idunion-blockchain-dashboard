@@ -1,10 +1,8 @@
     global:
       scrape_interval: 60s
-<<<<<<< HEAD
-      evaluation_interval: 60s # Evaluate rules every 15 seconds.
-=======
+
       evaluation_interval: 60s # Evaluate rules every 60 seconds.
->>>>>>> 0586dcfe9f6141b887f2cca7fbc11e1071d226b4
+
 
     scrape_configs:
       - job_name: 'node-external'
