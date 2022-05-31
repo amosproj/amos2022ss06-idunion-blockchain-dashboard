@@ -1,6 +1,16 @@
 # Idunion-blockchain-dashboard Setup
 Clone repository with: git clone https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard.git
 
+## Utils
+
+
+## Node exporter setup
+Run command: wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
+tar xvfz node_exporter-1.3.1.linux-amd64.tar.gz
+cd indy-node-monitor/node_exp*
+gnome-terminal -- node_exporter --collector.disable-defaults --collector.textfile.directory="../amos2022ss06-idunion-blockchain-dashboard/data/prometheus/" --collector.textfile
+firefox http://172.17.0.1:3000 http://172.17.0.1:9090/targets http://172.17.0.1:9100/metrics 
+
 ## Grafana and Prometheus setup
 - Run docker-compose.yml file with: sudo docker-compose up
 

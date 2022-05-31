@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import asyncio
-#import base58
+import base58
 import base64
 import json
 import re
@@ -13,6 +13,7 @@ import datetime
 import urllib.request
 from typing import Tuple
 
+import base58
 import nacl.signing
 
 import indy_vdr
