@@ -9,3 +9,7 @@ This repository contains all of the values & practices that we use here. It repr
 Feel free to fork this repository and use any or all of these policies, and to modify them in whatever way makes sense for your company. I hope that by publishing them, other companies can benefit from my research and improve their own teams culture.
 
 All feedback and suggestions (especially in the form of pull requests) are very appreciated. I’ve gotten several different perspectives to help arrive at these policies, but I am certainly missing many more and making mistakes as a result. This is a work in progress that I hope will get better with more time and more contributors.
+
+# Author
+
+Template adopted from Andrew @ghostinthewires (https://github.com/ghostinthewires/Team-Handbook-Template)

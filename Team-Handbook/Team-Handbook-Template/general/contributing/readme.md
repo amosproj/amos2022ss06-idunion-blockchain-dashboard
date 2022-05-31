@@ -1,8 +1,8 @@
-## Contributing to the Handbook
+## Contributing to the Project
 
-We contribute to the Team Handbook through merge requests (MRs). This allows us to do two things:
+We contribute to the project through merge requests (MRs). This allows us to do two things:
 
-1. Look back at the history of the handbook and how it evolved over time
+1. Look back at the history of the project and how it evolved over time
 1. Have conversations about new additions to the content through the merge request process
 
 ## Why we do merge requests
@@ -21,7 +21,7 @@ The benefits to doing merge requests are:
 
 ## Opening a Merge Request
 
-* Before opening the MR, make sure you're up to date with master so that your changes are easier to merge.
+* Before opening the MR, make sure you're up-to-date with master so that your changes are easier to merge.
 
 * The title and description should help the reviewer. Make the title succinct and descriptive, and then add detail in the description
 * The description should summarise your changes, this will make it possible to read through the list of changes and see what happened when
@@ -30,7 +30,7 @@ The benefits to doing merge requests are:
 Note: The canonical description of changes should always be in the individual
 commits - Merge Requests are an artefact of GitLab, and we would lose that data
 if we switched away. Please refer to the [commit message
-styleguide](https://github.com/ghostinthewires/Team-Handbook-Template/tree/master/Team-Handbook-Template/general/commit-style-guide).
+styleguide](#ToDo: add link here).
 
 
 

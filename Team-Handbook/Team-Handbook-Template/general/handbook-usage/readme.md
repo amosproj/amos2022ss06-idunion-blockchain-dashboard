@@ -1,6 +1,6 @@
 ## Advantages
 
-In the **[ENTER TEAM NAME]** our handbook is extensive and keeping it relevant is an important part of everyone's job. The reasons for having our processes described in a handbook are:
+In the AMOS Team 6 our handbook is extensive and keeping it relevant is an important part of everyone's job. The reasons for having our processes described in a handbook are:
 
 1. Reading is much faster than listening.
 1. Reading is async, you don't have to interrupt someone or wait for them to become available.
@@ -42,26 +42,7 @@ You can remind other people of this by asking "Can you please send a merge reque
 1. The handbook is the process. Any section sections with names like 'process', 'policies', 'best practices', or 'standard operating procedures' are an indication of a deeper problem, for example duplication between a prose description of a process and a numbered list description of the same process that should be combined in one description of the process.
 1. Use headers liberally. Headers should have normal capitalization (don't use [ALL CAPS](https://en.wikipedia.org/wiki/All_caps) nor [TitleCase](http://www.grammar-monster.com/glossary/title_case.htm)). After a header have one blank line, this is [not required in the standard](http://spec.commonmark.org/0.27/#example-46) but is our convention.
 
-1. Learn how to edit the [handbook using git](https://github.com/ghostinthewires/Team-Handbook-Template/tree/master/Team-Handbook-Template/general/contributing). Please read through the [Git Commit Style Guidelines](https://github.com/ghostinthewires/Team-Handbook-Template/tree/master/Team-Handbook-Template/general/commit-style-guide) before contributing.
-1. When you submit a merge request, make sure that it gets merged quickly. Making single, small changes quickly will ensure your branch doesn't fall far behind master, creating merge conflicts. Aim to make and merge your update on the same day. Mention people in the merge request or reach them via chat. If you get a suggestion for a large improvement on top of the exiting one consider doing that separately. 
-1. If you have to move content have a merge request that moves it and does nothing else. If you want to clean it up, summarize it, or expand on it do that after the moving MR is merged. This is much easier to review.
-1. Keep your handbook pages short and succinct. Eliminate fluff and get right to the point with the shortest possible wording. Keep in mind that the biggest challenge cited by new employees is the vast amount of information to take in during on-boarding.
-1. We don't need [.gitkeep files](http://www.ryanwright.me/cookbook/git/gitkeep) in our handbook, they make it harder to quickly open a file in editors. Don't add them, and delete them when you see them.
-
-## Management
-
 It is each team member's responsibility to ensure the handbook stays current and to verify the content in the handbook is accurate. 
-
-## Screenshare the handbook instead of creating a presentation
-
-Presentations are great for ephemeral content like group updates and board presentations. [Evergreen content](https://www.thebalance.com/what-is-evergreen-content-definition-dos-and-don-ts-2316028) like should be based on the handbook. Please screenshare the handbook instead of creating a presentation for evergreen content because:
-
-1. It saves you the effort of creating a presentation.
-1. People can easily find the handbook section later on.
-1. The handbook is checked and improved as part of the preperation.
-1. The content is open to contributions.
-1. The content is integrated with the rest of our processes.
-1. Also see some of the [advantages of using our handbook](https://github.com/ghostinthewires/Team-Handbook-Template/tree/master/Team-Handbook-Template/general/handbook-usage#advantages).
 
 ## Make it worthwhile
 
