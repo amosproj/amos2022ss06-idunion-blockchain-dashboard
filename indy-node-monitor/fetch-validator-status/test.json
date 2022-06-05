@@ -1,56 +1,140 @@
-usage: main.py [-h]
-               [--net {sbn,ssn,smn,vn,vn-linux,bcd,bct,bcp,gld,gl,imn,idn,itn}]
-               [--list-nets] [--genesis-url GENESIS_URL]
-               [--genesis-path GENESIS_PATH] [-s SEED] [--nodes NODES] [-v]
-               [--web] [--debug] [--alerts] [--status] [--example] [--mlog]
-               [--json [JSON [JSON ...]]] [--file [FILE [FILE ...]]]
-               [--worksheet [WORKSHEET [WORKSHEET ...]]]
-
-Fetch the status of all the indy-nodes within a given pool.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --net {sbn,ssn,smn,vn,vn-linux,bcd,bct,bcp,gld,gl,imn,idn,itn}
-                        Connect to a known network using an ID.
-  --list-nets           List known networks.
-  --genesis-url GENESIS_URL
-                        The url to the genesis file describing the ledger
-                        pool. Can be specified using the 'GENESIS_URL'
-                        environment variable.
-  --genesis-path GENESIS_PATH
-                        The path to the genesis file describing the ledger
-                        pool. Can be specified using the 'GENESIS_PATH'
-                        environment variable.
-  -s SEED, --seed SEED  The privileged DID seed to use for the ledger
-                        requests. Can be specified using the 'SEED'
-                        environment variable. If DID seed is not given the
-                        request will run anonymously.
-  --nodes NODES         The comma delimited list of the nodes from which to
-                        collect the status. The default is all of the nodes in
-                        the pool.
-  -v, --verbose         Enable verbose logging.
-  --web                 Start API server.
-  --debug               Run in debug mode.
-  --alerts              Alert Plug-in: Filter results based on alerts. Only
-                        return data for nodes containing detected 'info',
-                        'warnings', or 'errors'.
-  --status              Status Only Plug-in: Get status only. Suppresses
-                        detailed results.
-  --example             Example Plug-in: Runs expample plug-in
-  --mlog                Network Metrics Plug-in: Metrics log argument uses
-                        google sheets api and requires, Google API Credentials
-                        json file name (file must be in root folder), google
-                        sheet file name and worksheet name. ex: --mlog --json
-                        [Json File Name] --file [Google Sheet File Name]
-                        --worksheet [Worksheet name]
-  --json [JSON [JSON ...]]
-                        Google API Credentials json file name (file must be in
-                        root folder). Can be specified using the 'JSON'
-                        environment variable.
-  --file [FILE [FILE ...]]
-                        Specify which google sheets file you want to log too.
-                        Can be specified using the 'FILE' environment
-                        variable.
-  --worksheet [WORKSHEET [WORKSHEET ...]]
-                        Specify which worksheet you want to log too. Can be
-                        specified using the 'WORKSHEET' environment variable.
+indy_node_validator_info_size{source="indy-node"}  43052
+indy_total_nodes_count{node_name="Node1",source="indy_node"} 4
+indy_reachable{node="Node1",node_name="Node1",source="indy_node"} 1
+indy_primary_node{node="Node1",node_name="Node1",source="indy_node"} 0
+indy_reachable{node="Node2",node_name="Node1",source="indy_node"} 1
+indy_reachable{node="Node3",node_name="Node1",source="indy_node"} 1
+indy_reachable{node="Node4",node_name="Node1",source="indy_node"} 1
+indy_reachable_nodes_count{node_name="Node1",source="indy_node"} 4
+indy_unreachable_nodes_count{node_name="Node1",source="indy_node"} 0
+indy_sovrin_version{version="unknown",node_name="Node1",source="indy_node"} 0
+indy_node_version{version="1.12.4",node_name="Node1",source="indy_node"} 0
+indy_node_current_timestamp{node_name="Node1",source="indy_node"} 1654460447000
+indy_delta{node_name="Node1",source="indy_node"} 0.1
+indy_lambda{node_name="Node1",source="indy_node"} 240.0
+indy_omega{node_name="Node1",source="indy_node"} 20.0
+indy_instances_started{node_name="Node1",source="indy_node",ident="0"} 5858.334812983
+indy_instances_started{node_name="Node1",source="indy_node",ident="1"} 5858.336909116
+indy_ordered_request_counts{node_name="Node1",source="indy_node",ident="0"} 0.0
+indy_ordered_request_counts{node_name="Node1",source="indy_node",ident="1"} 0.0
+indy_ordered_request_durations{node_name="Node1",source="indy_node",ident="0"} 0.0
+indy_ordered_request_durations{node_name="Node1",source="indy_node",ident="1"} 0.0
+indy_max_master_request_latencies{node_name="Node1",source="indy_node"} 0.0
+indy_throughput{node_name="Node1",source="indy_node",ident="0"} 0.0
+indy_throughput{node_name="Node1",source="indy_node",ident="1"} 0.0
+indy_total_requests{node_name="Node1",source="indy_node"} 0.0
+indy_avg_backup_throughput{node_name="Node1",source="indy_node"} 0.0
+indy_average_per_second{node_name="Node1",source="indy_node",ident="read_transactions"} 0.0338066386
+indy_average_per_second{node_name="Node1",source="indy_node",ident="write_transactions"} 0.0
+indy_transaction_count{node_name="Node1",source="indy_node",ident="ledger"} 5.0
+indy_transaction_count{node_name="Node1",source="indy_node",ident="pool"} 4.0
+indy_transaction_count{node_name="Node1",source="indy_node",ident="config"} 0.0
+indy_transaction_count{node_name="Node1",source="indy_node",ident="audit"} 1740.0
+indy_uptime{node_name="Node1",source="indy_node"} 41323.0
+indy_last_view_change{node_name="Node1",source="indy_node"} -3600.0
+indy_consensus{node_name="Node1",source="indy_node"} 0
+indy_node_validator_info_size{source="indy-node"}  43052
+indy_total_nodes_count{node_name="Node2",source="indy_node"} 4
+indy_reachable{node="Node1",node_name="Node2",source="indy_node"} 1
+indy_primary_node{node="Node1",node_name="Node2",source="indy_node"} 0
+indy_reachable{node="Node2",node_name="Node2",source="indy_node"} 1
+indy_reachable{node="Node3",node_name="Node2",source="indy_node"} 1
+indy_reachable{node="Node4",node_name="Node2",source="indy_node"} 1
+indy_reachable_nodes_count{node_name="Node2",source="indy_node"} 4
+indy_unreachable_nodes_count{node_name="Node2",source="indy_node"} 0
+indy_sovrin_version{version="unknown",node_name="Node2",source="indy_node"} 0
+indy_node_version{version="1.12.4",node_name="Node2",source="indy_node"} 0
+indy_node_current_timestamp{node_name="Node2",source="indy_node"} 1654460447000
+indy_delta{node_name="Node2",source="indy_node"} 0.1
+indy_lambda{node_name="Node2",source="indy_node"} 240.0
+indy_omega{node_name="Node2",source="indy_node"} 20.0
+indy_instances_started{node_name="Node2",source="indy_node",ident="0"} 5858.313569335
+indy_instances_started{node_name="Node2",source="indy_node",ident="1"} 5858.315702397
+indy_ordered_request_counts{node_name="Node2",source="indy_node",ident="0"} 0.0
+indy_ordered_request_counts{node_name="Node2",source="indy_node",ident="1"} 0.0
+indy_ordered_request_durations{node_name="Node2",source="indy_node",ident="0"} 0.0
+indy_ordered_request_durations{node_name="Node2",source="indy_node",ident="1"} 0.0
+indy_max_master_request_latencies{node_name="Node2",source="indy_node"} 0.0
+indy_throughput{node_name="Node2",source="indy_node",ident="0"} 0.0
+indy_throughput{node_name="Node2",source="indy_node",ident="1"} 0.0
+indy_total_requests{node_name="Node2",source="indy_node"} 0.0
+indy_avg_backup_throughput{node_name="Node2",source="indy_node"} 0.0
+indy_average_per_second{node_name="Node2",source="indy_node",ident="read_transactions"} 0.0340243874
+indy_average_per_second{node_name="Node2",source="indy_node",ident="write_transactions"} 0.0
+indy_transaction_count{node_name="Node2",source="indy_node",ident="ledger"} 5.0
+indy_transaction_count{node_name="Node2",source="indy_node",ident="pool"} 4.0
+indy_transaction_count{node_name="Node2",source="indy_node",ident="config"} 0.0
+indy_transaction_count{node_name="Node2",source="indy_node",ident="audit"} 1740.0
+indy_uptime{node_name="Node2",source="indy_node"} 41323.0
+indy_last_view_change{node_name="Node2",source="indy_node"} -3600.0
+indy_consensus{node_name="Node2",source="indy_node"} 0
+indy_node_validator_info_size{source="indy-node"}  43052
+indy_total_nodes_count{node_name="Node3",source="indy_node"} 4
+indy_reachable{node="Node1",node_name="Node3",source="indy_node"} 1
+indy_primary_node{node="Node1",node_name="Node3",source="indy_node"} 0
+indy_reachable{node="Node2",node_name="Node3",source="indy_node"} 1
+indy_reachable{node="Node3",node_name="Node3",source="indy_node"} 1
+indy_reachable{node="Node4",node_name="Node3",source="indy_node"} 1
+indy_reachable_nodes_count{node_name="Node3",source="indy_node"} 4
+indy_unreachable_nodes_count{node_name="Node3",source="indy_node"} 0
+indy_sovrin_version{version="unknown",node_name="Node3",source="indy_node"} 0
+indy_node_version{version="1.12.4",node_name="Node3",source="indy_node"} 0
+indy_node_current_timestamp{node_name="Node3",source="indy_node"} 1654460447000
+indy_delta{node_name="Node3",source="indy_node"} 0.1
+indy_lambda{node_name="Node3",source="indy_node"} 240.0
+indy_omega{node_name="Node3",source="indy_node"} 20.0
+indy_instances_started{node_name="Node3",source="indy_node",ident="0"} 5858.396553006
+indy_instances_started{node_name="Node3",source="indy_node",ident="1"} 5858.39902041
+indy_ordered_request_counts{node_name="Node3",source="indy_node",ident="0"} 0.0
+indy_ordered_request_counts{node_name="Node3",source="indy_node",ident="1"} 0.0
+indy_ordered_request_durations{node_name="Node3",source="indy_node",ident="0"} 0.0
+indy_ordered_request_durations{node_name="Node3",source="indy_node",ident="1"} 0.0
+indy_max_master_request_latencies{node_name="Node3",source="indy_node"} 0.0
+indy_throughput{node_name="Node3",source="indy_node",ident="0"} 0.0
+indy_throughput{node_name="Node3",source="indy_node",ident="1"} 0.0
+indy_total_requests{node_name="Node3",source="indy_node"} 0.0
+indy_avg_backup_throughput{node_name="Node3",source="indy_node"} 0.0
+indy_average_per_second{node_name="Node3",source="indy_node",ident="read_transactions"} 0.0339518891
+indy_average_per_second{node_name="Node3",source="indy_node",ident="write_transactions"} 0.0
+indy_transaction_count{node_name="Node3",source="indy_node",ident="ledger"} 5.0
+indy_transaction_count{node_name="Node3",source="indy_node",ident="pool"} 4.0
+indy_transaction_count{node_name="Node3",source="indy_node",ident="config"} 0.0
+indy_transaction_count{node_name="Node3",source="indy_node",ident="audit"} 1740.0
+indy_uptime{node_name="Node3",source="indy_node"} 41323.0
+indy_last_view_change{node_name="Node3",source="indy_node"} -3600.0
+indy_consensus{node_name="Node3",source="indy_node"} 0
+indy_node_validator_info_size{source="indy-node"}  43052
+indy_total_nodes_count{node_name="Node4",source="indy_node"} 4
+indy_reachable{node="Node1",node_name="Node4",source="indy_node"} 1
+indy_primary_node{node="Node1",node_name="Node4",source="indy_node"} 0
+indy_reachable{node="Node2",node_name="Node4",source="indy_node"} 1
+indy_reachable{node="Node3",node_name="Node4",source="indy_node"} 1
+indy_reachable{node="Node4",node_name="Node4",source="indy_node"} 1
+indy_reachable_nodes_count{node_name="Node4",source="indy_node"} 4
+indy_unreachable_nodes_count{node_name="Node4",source="indy_node"} 0
+indy_sovrin_version{version="unknown",node_name="Node4",source="indy_node"} 0
+indy_node_version{version="1.12.4",node_name="Node4",source="indy_node"} 0
+indy_node_current_timestamp{node_name="Node4",source="indy_node"} 1654460447000
+indy_delta{node_name="Node4",source="indy_node"} 0.1
+indy_lambda{node_name="Node4",source="indy_node"} 240.0
+indy_omega{node_name="Node4",source="indy_node"} 20.0
+indy_instances_started{node_name="Node4",source="indy_node",ident="0"} 5858.289832493
+indy_instances_started{node_name="Node4",source="indy_node",ident="1"} 5858.29179877
+indy_ordered_request_counts{node_name="Node4",source="indy_node",ident="0"} 0.0
+indy_ordered_request_counts{node_name="Node4",source="indy_node",ident="1"} 0.0
+indy_ordered_request_durations{node_name="Node4",source="indy_node",ident="0"} 0.0
+indy_ordered_request_durations{node_name="Node4",source="indy_node",ident="1"} 0.0
+indy_max_master_request_latencies{node_name="Node4",source="indy_node"} 0.0
+indy_throughput{node_name="Node4",source="indy_node",ident="0"} 0.0
+indy_throughput{node_name="Node4",source="indy_node",ident="1"} 0.0
+indy_total_requests{node_name="Node4",source="indy_node"} 0.0
+indy_avg_backup_throughput{node_name="Node4",source="indy_node"} 0.0
+indy_average_per_second{node_name="Node4",source="indy_node",ident="read_transactions"} 0.0333952144
+indy_average_per_second{node_name="Node4",source="indy_node",ident="write_transactions"} 0.0
+indy_transaction_count{node_name="Node4",source="indy_node",ident="ledger"} 5.0
+indy_transaction_count{node_name="Node4",source="indy_node",ident="pool"} 4.0
+indy_transaction_count{node_name="Node4",source="indy_node",ident="config"} 0.0
+indy_transaction_count{node_name="Node4",source="indy_node",ident="audit"} 1740.0
+indy_uptime{node_name="Node4",source="indy_node"} 41323.0
+indy_last_view_change{node_name="Node4",source="indy_node"} -3600.0
+indy_consensus{node_name="Node4",source="indy_node"} 0

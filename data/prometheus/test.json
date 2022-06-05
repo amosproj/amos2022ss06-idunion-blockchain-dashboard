@@ -5,8 +5,8 @@
     "node-address": "tcp://172.17.0.1:9701",
     "status": {
       "ok": true,
-      "uptime": "8:04:46",
-      "timestamp": 1653841293,
+      "uptime": "10:19:15",
+      "timestamp": 1654456279,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -17,10 +17,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1653841293115332584,
+        "reqId": 1654456279728979701,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1653841293,
+          "timestamp": 1654456279,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -71,8 +71,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 5055.725929615,
-                "1": 5055.727993661
+                "0": 5858.334812983,
+                "1": 5858.336909116
               },
               "ordered request counts": {
                 "0": 0,
@@ -96,19 +96,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0334862858,
+                "read-transactions": 0.0336154916,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1065
+                "audit": 1698
               },
-              "uptime": 29086
+              "uptime": 37155
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'Awc895Hhb8XxqVBVKnhjqj5LqG4726t1q7Uf9qdGQuQB'",
+              "3": "b'FPwhQi8g6R8LjcJjSkF7fE5kYVKf4h1MLgdGavHKcSJK'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -168,17 +168,17 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node2": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node4": [
+                  "Node2": [
                     null,
                     null
                   ]
                 },
                 "0": {
-                  "Node3": [
+                  "Node2": [
                     null,
                     null
                   ],
@@ -193,15 +193,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -213,10 +213,10 @@
             "Replicas_status": {
               "Node1:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "1000:1300",
+                "Watermarks": "1600:1900",
                 "Last_ordered_3PC": [
                   0,
-                  1065
+                  1698
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -310,7 +310,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Sunday, May 29, 2022 4:21:33 PM +0000",
+          "Update_time": "Sunday, June 5, 2022 7:11:19 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -335,8 +335,8 @@
     "node-address": "tcp://172.17.0.1:9703",
     "status": {
       "ok": true,
-      "uptime": "8:04:46",
-      "timestamp": 1653841293,
+      "uptime": "10:19:15",
+      "timestamp": 1654456279,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -347,10 +347,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1653841293115332584,
+        "reqId": 1654456279728979701,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1653841293,
+          "timestamp": 1654456279,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -401,8 +401,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 5055.734549991,
-                "1": 5055.737131115
+                "0": 5858.313569335,
+                "1": 5858.315702397
               },
               "ordered request counts": {
                 "0": 0,
@@ -426,19 +426,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0338988469,
+                "read-transactions": 0.0339115067,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1065
+                "audit": 1698
               },
-              "uptime": 29086
+              "uptime": 37155
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'Awc895Hhb8XxqVBVKnhjqj5LqG4726t1q7Uf9qdGQuQB'",
+              "3": "b'FPwhQi8g6R8LjcJjSkF7fE5kYVKf4h1MLgdGavHKcSJK'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -498,21 +498,21 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node1": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node4": [
+                  "Node1": [
                     null,
                     null
                   ]
                 },
                 "0": {
-                  "Node3": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node4": [
+                  "Node1": [
                     null,
                     null
                   ]
@@ -523,15 +523,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -543,10 +543,10 @@
             "Replicas_status": {
               "Node2:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "1000:1300",
+                "Watermarks": "1600:1900",
                 "Last_ordered_3PC": [
                   0,
-                  1065
+                  1698
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -640,7 +640,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Sunday, May 29, 2022 4:21:33 PM +0000",
+          "Update_time": "Sunday, June 5, 2022 7:11:19 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -665,8 +665,8 @@
     "node-address": "tcp://172.17.0.1:9705",
     "status": {
       "ok": true,
-      "uptime": "8:04:46",
-      "timestamp": 1653841293,
+      "uptime": "10:19:15",
+      "timestamp": 1654456279,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -677,10 +677,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1653841293115332584,
+        "reqId": 1654456279728979701,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1653841293,
+          "timestamp": 1654456279,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -731,8 +731,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 5055.734568515,
-                "1": 5055.737366205
+                "0": 5858.396553006,
+                "1": 5858.39902041
               },
               "ordered request counts": {
                 "0": 0,
@@ -756,19 +756,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0337269653,
+                "read-transactions": 0.034099999,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1065
+                "audit": 1698
               },
-              "uptime": 29086
+              "uptime": 37155
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'Awc895Hhb8XxqVBVKnhjqj5LqG4726t1q7Uf9qdGQuQB'",
+              "3": "b'FPwhQi8g6R8LjcJjSkF7fE5kYVKf4h1MLgdGavHKcSJK'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -828,21 +828,21 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node2": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node1": [
+                  "Node2": [
                     null,
                     null
                   ]
                 },
                 "0": {
-                  "Node2": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node4": [
+                  "Node2": [
                     null,
                     null
                   ]
@@ -853,15 +853,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -873,10 +873,10 @@
             "Replicas_status": {
               "Node3:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "1000:1300",
+                "Watermarks": "1600:1900",
                 "Last_ordered_3PC": [
                   0,
-                  1065
+                  1698
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -970,7 +970,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Sunday, May 29, 2022 4:21:33 PM +0000",
+          "Update_time": "Sunday, June 5, 2022 7:11:19 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -995,8 +995,8 @@
     "node-address": "tcp://172.17.0.1:9707",
     "status": {
       "ok": true,
-      "uptime": "8:04:46",
-      "timestamp": 1653841293,
+      "uptime": "10:19:15",
+      "timestamp": 1654456279,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -1007,10 +1007,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1653841293115332584,
+        "reqId": 1654456279728979701,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1653841293,
+          "timestamp": 1654456279,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -1061,8 +1061,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 5055.725927421,
-                "1": 5055.727964456
+                "0": 5858.289832493,
+                "1": 5858.29179877
               },
               "ordered request counts": {
                 "0": 0,
@@ -1086,19 +1086,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0333144,
+                "read-transactions": 0.0336423591,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1065
+                "audit": 1698
               },
-              "uptime": 29086
+              "uptime": 37155
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'Awc895Hhb8XxqVBVKnhjqj5LqG4726t1q7Uf9qdGQuQB'",
+              "3": "b'FPwhQi8g6R8LjcJjSkF7fE5kYVKf4h1MLgdGavHKcSJK'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -1158,21 +1158,21 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node3": [
+                  "Node2": [
                     null,
                     null
                   ],
-                  "Node2": [
+                  "Node1": [
                     null,
                     null
                   ]
                 },
                 "0": {
-                  "Node1": [
+                  "Node2": [
                     null,
                     null
                   ],
-                  "Node3": [
+                  "Node1": [
                     null,
                     null
                   ]
@@ -1183,15 +1183,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-05-29 16:18:23+00:00",
+                "Last_updated_time": "2022-06-05 19:09:08+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -1203,10 +1203,10 @@
             "Replicas_status": {
               "Node4:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "1000:1300",
+                "Watermarks": "1600:1900",
                 "Last_ordered_3PC": [
                   0,
-                  1065
+                  1698
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -1300,7 +1300,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Sunday, May 29, 2022 4:21:33 PM +0000",
+          "Update_time": "Sunday, June 5, 2022 7:11:19 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
