@@ -1,13 +1,12 @@
 #!/bin/bash
-
-cd ../../..
+source variables
 
 ## close von-network docker container
-cd von-network/
+cd ${VON_NET_DIR}
 ./manage down
 
 ## close grafana and prometheus docker container
-cd ../amos2022ss06-idunion-blockchain-dashboard/
+cd ${AMOS_PROJ_DIR}
 docker-compose down &
 
 ## close node exporter
