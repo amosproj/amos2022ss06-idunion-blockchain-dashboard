@@ -25,6 +25,7 @@ from indy_vdr.ledger import (
 )
 from indy_vdr.pool import open_pool
 
+from plugin_collection import PluginCollection
 
 verbose = False
 prometheus = False
@@ -55,9 +56,95 @@ def seed_as_bytes(seed):
         return base64.b64decode(seed)
     return seed.encode("ascii")
 
+async def fetch_status(genesis_path: str, nodes: str = None, ident: DidKey = None, network_name: str = None):   # status_only: bool = False, alerts_only: bool = False):
+    # pool = await open_pool(transactions_path=genesis_path)
+    # result = []
+    # verifiers = {}
+    #
+    # if ident:
+    #     request = build_get_validator_info_request(ident.did)
+    #     ident.sign_request(request)
+    # else:
+    #     request = build_get_txn_request(None, 1, 1)
+    #
+    # from_nodes = []
+    # if nodes:
+    #     from_nodes = nodes.split(",")
+    # response = await pool.submit_action(request, node_aliases = from_nodes)
+    # try:
+    #     # Introduced in https://github.com/hyperledger/indy-vdr/commit/ce0e7c42491904e0d563f104eddc2386a52282f7
+    #     verifiers = await pool.get_verifiers()
+    # except AttributeError:
+    #     pass
+    #
+    # primary = ""
+    # packages = {}
+    # for node, val in response.items():
+    #     jsval = []
+    #     status = {}
+    #     errors = []
+    #     warnings = []
+    #     info = []
+    #     entry = {"name": node}
+    #     try:
+    #         await get_node_addresses(entry, verifiers)
+    #         jsval = json.loads(val)
+    #         if not primary:
+    #             primary = await get_primary_name(jsval, node)
+    #         errors, warnings = await detect_issues(jsval, node, primary, ident)
+    #         info = await get_info(jsval, ident)
+    #         packages[node] = await get_package_info(jsval)
+    #     except json.JSONDecodeError:
+    #         errors = [val]  # likely "timeout"
+    #
+    #     # Status Summary
+    #     entry["status"] = await get_status_summary(jsval, errors)
+    #     # Info
+    #     if len(info) > 0:
+    #         entry["status"]["info"] = len(info)
+    #         entry["info"] = info
+    #     # Errors / Warnings
+    #     if len(errors) > 0:
+    #         entry["status"]["errors"] = len(errors)
+    #         entry["errors"] = errors
+    #     if len(warnings) > 0:
+    #         entry["status"]["warnings"] = len(warnings)
+    #         entry["warnings"] = warnings
+    #     # Full Response
+    #     if not status_only and jsval:
+    #         entry["response"] = jsval
+    #
+    #     result.append(entry)
+    #
+    # # Package Mismatches
+    # if packages:
+    #     await merge_package_mismatch_info(result, packages)
+    #
+    # # Connection Issues
+    # await detect_connection_issues(result)
+    #
+    # # Filter on alerts
+    # if alerts_only:
+    #     filtered_result = []
+    #     for item in result:
+    #         if ("info" in item["status"]) or ("warnings" in  item["status"]) or ("errors" in  item["status"]):
+    #             filtered_result.append(item)
+    #     result = filtered_result
 
-async def fetch_status(genesis_path: str, nodes: str = None, ident: DidKey = None, status_only: bool = False, alerts_only: bool = False):
-    pool = await open_pool(transactions_path=genesis_path)
+    # Start Of Engine
+    attempt = 3
+    while attempt:
+        try:
+            pool = await open_pool(transactions_path=genesis_path)
+        except:
+            log("Pool Timed Out! Trying again...")
+            if not attempt:
+                print("Unable to get pool Response! 3 attempts where made. Exiting...")
+                exit()
+            attempt -= 1
+            continue
+        break
+
     result = []
     verifiers = {}
 
@@ -70,68 +157,18 @@ async def fetch_status(genesis_path: str, nodes: str = None, ident: DidKey = Non
     from_nodes = []
     if nodes:
         from_nodes = nodes.split(",")
-    response = await pool.submit_action(request, node_aliases = from_nodes)
+    response = await pool.submit_action(request, node_aliases=from_nodes)
     try:
         # Introduced in https://github.com/hyperledger/indy-vdr/commit/ce0e7c42491904e0d563f104eddc2386a52282f7
         verifiers = await pool.get_verifiers()
     except AttributeError:
         pass
+    # End Of Engine
 
-    primary = ""
-    packages = {}
-    for node, val in response.items():
-        jsval = []
-        status = {}
-        errors = []
-        warnings = []
-        info = []
-        entry = {"name": node}
-        try:
-            await get_node_addresses(entry, verifiers)
-            jsval = json.loads(val)
-            if not primary:
-                primary = await get_primary_name(jsval, node)
-            errors, warnings = await detect_issues(jsval, node, primary, ident)
-            info = await get_info(jsval, ident)
-            packages[node] = await get_package_info(jsval)
-        except json.JSONDecodeError:
-            errors = [val]  # likely "timeout"
+    result = await monitor_plugins.apply_all_plugins_on_value(result, network_name, response, verifiers)
 
-        # Status Summary
-        entry["status"] = await get_status_summary(jsval, errors)
-        # Info
-        if len(info) > 0:
-            entry["status"]["info"] = len(info)
-            entry["info"] = info
-        # Errors / Warnings
-        if len(errors) > 0:
-            entry["status"]["errors"] = len(errors)
-            entry["errors"] = errors
-        if len(warnings) > 0:
-            entry["status"]["warnings"] = len(warnings)
-            entry["warnings"] = warnings
-        # Full Response
-        if not status_only and jsval:
-            entry["response"] = jsval
+    data=json.dumps(result, indent=2)   # previously present
 
-        result.append(entry)
-
-    # Package Mismatches
-    if packages:
-        await merge_package_mismatch_info(result, packages)
-
-    # Connection Issues
-    await detect_connection_issues(result)
-
-    # Filter on alerts
-    if alerts_only:
-        filtered_result = []
-        for item in result:
-            if ("info" in item["status"]) or ("warnings" in  item["status"]) or ("errors" in  item["status"]):
-                filtered_result.append(item)
-        result = filtered_result
-
-    data=json.dumps(result, indent=2)
     if (prometheus==False):
         print(data)
     else:
@@ -353,7 +390,7 @@ def output_prometheus(data_json):
                 sys.stderr.write("Error: KeyError")
                 sys.exit(2) 
 
-        print('indy_node_validator_info_size{source="indy-node"} ',all_node_data_size)
+        print('indy_node_validator_info_size{source="indy-node"} ', all_node_data_size)
 
         for v in [ node_ver, '.'.join(node_ver.split('.')[:-1]), 'latest' ]:
             try:
@@ -625,14 +662,22 @@ if __name__ == "__main__":
     parser.add_argument("--genesis-path", default=os.getenv("GENESIS_PATH") or f"{get_script_dir()}/genesis.txn" , help="The path to the genesis file describing the ledger pool.  Can be specified using the 'GENESIS_PATH' environment variable.")
     parser.add_argument("-s", "--seed", default=os.environ.get('SEED') , help="The privileged DID seed to use for the ledger requests.  Can be specified using the 'SEED' environment variable.")
     parser.add_argument("-a", "--anonymous", action="store_true", help="Perform requests anonymously, without requiring privileged DID seed.")
-    parser.add_argument("--status", action="store_true", help="Get status only.  Suppresses detailed results.")
-    parser.add_argument("--alerts", action="store_true", help="Filter results based on alerts.  Only return data for nodes containing detected 'info', 'warnings', or 'errors'.")
+    # parser.add_argument("--status", action="store_true", help="Get status only.  Suppresses detailed results.")
+    # parser.add_argument("--alerts", action="store_true", help="Filter results based on alerts.  Only return data for nodes containing detected 'info', 'warnings', or 'errors'.")
     parser.add_argument("--nodes", help="The comma delimited list of the nodes from which to collect the status.  The default is all of the nodes in the pool.")
     parser.add_argument("-p", "--prometheus",action="store_true", help="Enable output in Prometheus format")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose logging.")
-    args = parser.parse_args()
+    #args = parser.parse_args()
+
+    # verbose = args.verbose
+
+    monitor_plugins = PluginCollection('plugins')
+    monitor_plugins.get_parse_args(parser)
+    args, unknown = parser.parse_known_args()
 
     verbose = args.verbose
+
+    monitor_plugins.load_all_parse_args(args)
 
     if args.prometheus:
         prometheus = True
@@ -642,15 +687,19 @@ if __name__ == "__main__":
         print(json.dumps(load_network_list(), indent=2))
         exit()
 
+    network_name = None
     if args.net:
         log("Loading known network list ...")
         networks = load_network_list()
         if args.net in networks:
             log("Connecting to '{0}' ...".format(networks[args.net]["name"]))
             args.genesis_url = networks[args.net]["genesisUrl"]
+            network_name = networks[args.net]["name"]
 
     if args.genesis_url:
         download_genesis_file(args.genesis_url, args.genesis_path)
+        if not network_name:
+            network_name = args.genesis_url
     if not os.path.exists(args.genesis_path):
         print("Set the GENESIS_URL or GENESIS_PATH environment variable or argument.\n", file=sys.stderr)
         parser.print_help()
@@ -669,4 +718,4 @@ if __name__ == "__main__":
     else:
         ident = None
 
-    asyncio.get_event_loop().run_until_complete(fetch_status(args.genesis_path, args.nodes, ident, args.status, args.alerts))
+    asyncio.get_event_loop().run_until_complete(fetch_status(args.genesis_path, args.nodes, ident, network_name))
