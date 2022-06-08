@@ -425,3 +425,4 @@ if __name__ == "__main__":
         ident = None
 
     asyncio.get_event_loop().run_until_complete(fetch_status(args.genesis_path, args.nodes, ident, network_name))
+
