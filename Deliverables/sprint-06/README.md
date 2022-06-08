@@ -1,10 +1,10 @@
 # Documentation
 This file summarizes the so-far documentation of our project.
-## 1. Design Documentation
+## 1. Build & Deploy Documentation
 All documentation regarding build and deployment of our software can be found in our [Project-Handbook](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/main/Project-Handbook) and is updated continuously by all team members.
 
 The build process is also available with audio description to understand each step an can be found [here](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/main/Deliverables/sprint-05/build-process-video-audio.mkv).
-## 2. Build & Deploy Documentation
+## 2. Design Documentation
 ![Software_Architecture_High_level](https://user-images.githubusercontent.com/73983419/167786311-3a55dbe2-7d1b-4db6-bf9c-58bed1cf2179.jpg)
 
 The picture above describes the planned architecture on a high-level basis. More detailed architecture information can be found [here](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/main/Documentation/software-architecture.pdf).
