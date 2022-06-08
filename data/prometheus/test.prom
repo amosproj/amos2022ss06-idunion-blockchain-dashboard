@@ -5,8 +5,8 @@
     "node-address": "tcp://172.17.0.1:9701",
     "status": {
       "ok": true,
-      "uptime": "0:13:44",
-      "timestamp": 1654642217,
+      "uptime": "0:17:38",
+      "timestamp": 1654642451,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -17,10 +17,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1654642217075467052,
+        "reqId": 1654642451627143441,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1654642217,
+          "timestamp": 1654642451,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -96,19 +96,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0461049568,
+                "read-transactions": 0.0434470143,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1770
+                "audit": 1773
               },
-              "uptime": 824
+              "uptime": 1058
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'7gjKJ8PTGrNeU89V7NKfR5d8CCfyXDEtMRy3C3Tcbndy'",
+              "3": "b'4ZQ6rCRnVosPejBEtXReDgSWDkY3y4cbuaHRoFRuuwbk'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -193,15 +193,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -216,7 +216,7 @@
                 "Watermarks": "1764:2064",
                 "Last_ordered_3PC": [
                   0,
-                  1770
+                  1773
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -310,7 +310,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 7, 2022 10:50:17 PM +0000",
+          "Update_time": "Tuesday, June 7, 2022 10:54:11 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -335,8 +335,8 @@
     "node-address": "tcp://172.17.0.1:9703",
     "status": {
       "ok": true,
-      "uptime": "0:13:44",
-      "timestamp": 1654642217,
+      "uptime": "0:17:38",
+      "timestamp": 1654642451,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -347,10 +347,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1654642217075467052,
+        "reqId": 1654642451627143441,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1654642217,
+          "timestamp": 1654642451,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -426,19 +426,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0436811991,
+                "read-transactions": 0.0415601279,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1770
+                "audit": 1773
               },
-              "uptime": 824
+              "uptime": 1058
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'7gjKJ8PTGrNeU89V7NKfR5d8CCfyXDEtMRy3C3Tcbndy'",
+              "3": "b'4ZQ6rCRnVosPejBEtXReDgSWDkY3y4cbuaHRoFRuuwbk'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -523,15 +523,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -546,7 +546,7 @@
                 "Watermarks": "1764:2064",
                 "Last_ordered_3PC": [
                   0,
-                  1770
+                  1773
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -640,7 +640,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 7, 2022 10:50:17 PM +0000",
+          "Update_time": "Tuesday, June 7, 2022 10:54:11 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -665,8 +665,8 @@
     "node-address": "tcp://172.17.0.1:9705",
     "status": {
       "ok": true,
-      "uptime": "0:13:44",
-      "timestamp": 1654642217,
+      "uptime": "0:17:38",
+      "timestamp": 1654642451,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -677,10 +677,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1654642217075467052,
+        "reqId": 1654642451627143441,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1654642217,
+          "timestamp": 1654642451,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -756,19 +756,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.047318751,
+                "read-transactions": 0.0425028782,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1770
+                "audit": 1773
               },
-              "uptime": 824
+              "uptime": 1058
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'7gjKJ8PTGrNeU89V7NKfR5d8CCfyXDEtMRy3C3Tcbndy'",
+              "3": "b'4ZQ6rCRnVosPejBEtXReDgSWDkY3y4cbuaHRoFRuuwbk'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -853,15 +853,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -876,7 +876,7 @@
                 "Watermarks": "1764:2064",
                 "Last_ordered_3PC": [
                   0,
-                  1770
+                  1773
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -970,7 +970,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 7, 2022 10:50:17 PM +0000",
+          "Update_time": "Tuesday, June 7, 2022 10:54:11 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -995,8 +995,8 @@
     "node-address": "tcp://172.17.0.1:9707",
     "status": {
       "ok": true,
-      "uptime": "0:13:44",
-      "timestamp": 1654642217,
+      "uptime": "0:17:38",
+      "timestamp": 1654642451,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -1007,10 +1007,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1654642217075467052,
+        "reqId": 1654642451627143441,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1654642217,
+          "timestamp": 1654642451,
           "Hardware": {
             "HDD_used_by_node": "2 MBs"
           },
@@ -1086,19 +1086,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0449009782,
+                "read-transactions": 0.0443984047,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 1770
+                "audit": 1773
               },
-              "uptime": 824
+              "uptime": 1058
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'7gjKJ8PTGrNeU89V7NKfR5d8CCfyXDEtMRy3C3Tcbndy'",
+              "3": "b'4ZQ6rCRnVosPejBEtXReDgSWDkY3y4cbuaHRoFRuuwbk'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -1183,15 +1183,15 @@
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-07 22:46:35+00:00",
+                "Last_updated_time": "2022-06-07 22:51:36+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -1206,7 +1206,7 @@
                 "Watermarks": "1764:2064",
                 "Last_ordered_3PC": [
                   0,
-                  1770
+                  1773
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -1300,7 +1300,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 7, 2022 10:50:17 PM +0000",
+          "Update_time": "Tuesday, June 7, 2022 10:54:11 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
