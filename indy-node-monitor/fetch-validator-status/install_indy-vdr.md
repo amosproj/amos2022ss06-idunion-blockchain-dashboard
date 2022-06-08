@@ -18,7 +18,7 @@ $ cargo build --lib --release
 
 - Copy indy-vdr library: 
 ```
-$ cp target/release/libindy*.so  /usr/local/lib
+$ sudo cp target/release/libindy*.so  /usr/local/lib
 ```
 
 - Do ldconfig or export local libraries to library path
