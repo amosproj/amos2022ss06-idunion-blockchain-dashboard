@@ -5,7 +5,7 @@ Based on the vtree visualization, the most important information shall be outlin
 
 ## Node information
 
-> **_Disclaimer:_** This section is still under construction. Eventually, it will display the JSON file structure of the most important ledger data based on this [file](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/15-list-all-available-data/data/ledger/analyze.json).
+> **_Disclaimer:_** This section is still under construction. Eventually, it will display the JSON file structure of the most important ledger data based on the analyzed JSON [file](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/15-list-all-available-data/data/ledger/analyze.json).
 
 <details>
 <summary>0</summary>
