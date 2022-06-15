@@ -27,13 +27,14 @@ class main(plugin_collection.Plugin):
 
         for node in result:
             if "response" in node:
-                # response = node["response"]
-                # result = response["result"]
-                data = result["data"]
-                node_info = data["node_info"]
+                response = node["response"]
+                result_data = response["result"]
+                data = result_data["data"]
+                node_info = data["Node_info"]
                 metrics = node_info["Metrics"]
                 average_per_second = metrics["average-per-second"]
                 read_transactions = average_per_second["read-transactions"]
+                # read_transactions = node["response"]["result"]["data"]["Node_info"]["Metrics"]["average-per-second"]["read-transactions"]
                 sum += read_transactions
                 count += 1
 
@@ -41,6 +42,6 @@ class main(plugin_collection.Plugin):
 
         for node in result:
             if "response" in node:
-                node["response"]["average-read-transaction-time"] = average
+                node["response"]["result"]["data"]["Node_info"]["Metrics"]["average-read-transaction-time"] = average
 
         return result
