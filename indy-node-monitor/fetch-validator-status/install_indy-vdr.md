@@ -29,7 +29,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
  
 - Install the python wrapper (this can be done in a virtual environment):
 ```
-cd Wrappers/Python
+cd wrappers/python
 pip3 install .
 ```
 
