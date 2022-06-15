@@ -1,6 +1,8 @@
 JSON to Tree Diagram Converter
 ==============================
 
+This repository is forked from: https://github.com/ivan111/vtree and adapted to our needs.
+
 > For Yakusugi
 
 This tool converts JSON strings into tree diagrams. For example, it is used to show AST(Abstract Syntax Tree) as tree diagrams for debugging. In that case, of course, you need to translate AST into JSON.
