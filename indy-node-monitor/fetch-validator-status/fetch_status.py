@@ -315,6 +315,8 @@ def process_data_prometheus_1_5(data):
             consensus=in_consensus
         )
     )
+    file = open("global_var_p.txt", "r")
+    print(file.read())
 
 def filter_timestamps(data):
     filtered=[]
@@ -393,8 +395,16 @@ if __name__ == "__main__":
 
     monitor_plugins.load_all_parse_args(args)
 
+    # enable prometheus and store it to global variable
+    # cur_path = os.path.dirname(__file__)
+    # new_path = os.path.relpath('..\\subfldr1\\testfile.txt', cur_path)
     if args.prometheus:
         prometheus = True
+        with open("global_var_p.txt", 'w') as f:
+            f.write("True")
+    else:
+        with open("global_var_p.txt", 'w') as f:
+            f.write("False")
 
     if args.list_nets:
         print(json.dumps(load_network_list(), indent=2))

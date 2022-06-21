@@ -5,8 +5,8 @@
     "node-address": "tcp://172.17.0.1:9701",
     "status": {
       "ok": true,
-      "uptime": "0:21:03",
-      "timestamp": 1655821721,
+      "uptime": "1:02:10",
+      "timestamp": 1655836417,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -17,10 +17,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1655821721415861348,
+        "reqId": 1655836417040294237,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1655821721,
+          "timestamp": 1655836417,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -71,8 +71,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 4070.489693452,
-                "1": 4070.491867727
+                "0": 198.236616806,
+                "1": 198.239030534
               },
               "ordered request counts": {
                 "0": 0,
@@ -96,19 +96,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0498653391,
+                "read-transactions": 0.0359215084,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 12
+                "audit": 87
               },
-              "uptime": 1263
+              "uptime": 3730
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'EKd4ufzDNXvjnvNrs4HMEMRk3haMZ3qL37GcMVJ3QJNU'",
+              "3": "b'A7NebW3Q31UueWebfBFjBEYpgVkWKcnhmEoK8VGnxA3k'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -168,58 +168,40 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node4": [
+                  "Node3": [
                     null,
                     null
                   ],
-                  "Node2": [
+                  "Node4": [
                     null,
                     null
                   ]
                 },
                 "0": {
-                  "Node2": [
+                  "Node4": [
                     null,
                     null
                   ],
-                  "Node4": [
+                  "Node2": [
                     null,
                     null
                   ]
                 },
-                "2": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node4": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node4": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -231,10 +213,10 @@
             "Replicas_status": {
               "Node1:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "51:351",
                 "Last_ordered_3PC": [
                   0,
-                  12
+                  87
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -328,7 +310,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 21, 2022 2:28:41 PM +0000",
+          "Update_time": "Tuesday, June 21, 2022 6:33:37 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -353,8 +335,8 @@
     "node-address": "tcp://172.17.0.1:9703",
     "status": {
       "ok": true,
-      "uptime": "0:21:03",
-      "timestamp": 1655821721,
+      "uptime": "1:02:10",
+      "timestamp": 1655836417,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -365,10 +347,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1655821721415861348,
+        "reqId": 1655836417040294237,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1655821721,
+          "timestamp": 1655836417,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -419,8 +401,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 4070.532517382,
-                "1": 4070.534497876
+                "0": 197.925690246,
+                "1": 197.927559798
               },
               "ordered request counts": {
                 "0": 0,
@@ -444,19 +426,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0482837933,
+                "read-transactions": 0.0348460405,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 12
+                "audit": 87
               },
-              "uptime": 1263
+              "uptime": 3730
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'EKd4ufzDNXvjnvNrs4HMEMRk3haMZ3qL37GcMVJ3QJNU'",
+              "3": "b'A7NebW3Q31UueWebfBFjBEYpgVkWKcnhmEoK8VGnxA3k'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -516,7 +498,7 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node1": [
+                  "Node3": [
                     null,
                     null
                   ],
@@ -526,48 +508,30 @@
                   ]
                 },
                 "0": {
-                  "Node4": [
+                  "Node3": [
                     null,
                     null
                   ],
-                  "Node1": [
+                  "Node4": [
                     null,
                     null
                   ]
                 },
-                "2": {
-                  "Node1": [
-                    null,
-                    null
-                  ],
-                  "Node3": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node4": [
-                    null,
-                    null
-                  ],
-                  "Node3": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -579,10 +543,10 @@
             "Replicas_status": {
               "Node2:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "51:351",
                 "Last_ordered_3PC": [
                   0,
-                  12
+                  87
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -676,7 +640,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 21, 2022 2:28:41 PM +0000",
+          "Update_time": "Tuesday, June 21, 2022 6:33:37 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -701,8 +665,8 @@
     "node-address": "tcp://172.17.0.1:9705",
     "status": {
       "ok": true,
-      "uptime": "0:21:03",
-      "timestamp": 1655821721,
+      "uptime": "1:02:10",
+      "timestamp": 1655836417,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -713,10 +677,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1655821721415861348,
+        "reqId": 1655836417040294237,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1655821721,
+          "timestamp": 1655836417,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -767,8 +731,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 4070.698543198,
-                "1": 4070.700556263
+                "0": 198.047580508,
+                "1": 198.049582817
               },
               "ordered request counts": {
                 "0": 0,
@@ -792,19 +756,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0451235576,
+                "read-transactions": 0.0372593169,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 12
+                "audit": 87
               },
-              "uptime": 1263
+              "uptime": 3730
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'EKd4ufzDNXvjnvNrs4HMEMRk3haMZ3qL37GcMVJ3QJNU'",
+              "3": "b'A7NebW3Q31UueWebfBFjBEYpgVkWKcnhmEoK8VGnxA3k'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -864,11 +828,11 @@
               },
               "Last_txn_3PC_keys": {
                 "3": {
-                  "Node4": [
+                  "Node2": [
                     null,
                     null
                   ],
-                  "Node2": [
+                  "Node1": [
                     null,
                     null
                   ]
@@ -883,39 +847,21 @@
                     null
                   ]
                 },
-                "2": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node4": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node4": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -927,10 +873,10 @@
             "Replicas_status": {
               "Node3:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "51:351",
                 "Last_ordered_3PC": [
                   0,
-                  12
+                  87
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -1024,7 +970,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 21, 2022 2:28:41 PM +0000",
+          "Update_time": "Tuesday, June 21, 2022 6:33:37 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -1049,8 +995,8 @@
     "node-address": "tcp://172.17.0.1:9707",
     "status": {
       "ok": true,
-      "uptime": "0:21:03",
-      "timestamp": 1655821721,
+      "uptime": "1:02:10",
+      "timestamp": 1655836417,
       "software": {
         "indy-node": "1.12.4",
         "sovrin": "unknown"
@@ -1061,10 +1007,10 @@
       "result": {
         "type": "119",
         "identifier": "V4SGRU86Z58d6TV7PBUe6f",
-        "reqId": 1655821721415861348,
+        "reqId": 1655836417040294237,
         "data": {
           "response-version": "0.0.1",
-          "timestamp": 1655821721,
+          "timestamp": 1655836417,
           "Hardware": {
             "HDD_used_by_node": "0 MBs"
           },
@@ -1115,8 +1061,8 @@
               "Lambda": 240,
               "Omega": 20,
               "instances started": {
-                "0": 4070.667235894,
-                "1": 4070.669219594
+                "0": 198.090644808,
+                "1": 198.09262147
               },
               "ordered request counts": {
                 "0": 0,
@@ -1140,19 +1086,19 @@
               "avg backup throughput": 0.0,
               "master throughput ratio": null,
               "average-per-second": {
-                "read-transactions": 0.0498712973,
+                "read-transactions": 0.0351153276,
                 "write-transactions": 0.0
               },
               "transaction-count": {
                 "ledger": 5,
                 "pool": 4,
                 "config": 0,
-                "audit": 12
+                "audit": 87
               },
-              "uptime": 1263
+              "uptime": 3730
             },
             "Committed_ledger_root_hashes": {
-              "3": "b'EKd4ufzDNXvjnvNrs4HMEMRk3haMZ3qL37GcMVJ3QJNU'",
+              "3": "b'A7NebW3Q31UueWebfBFjBEYpgVkWKcnhmEoK8VGnxA3k'",
               "0": "b'EE9Dr84v87WGqiDFhHYHC9eVF1f1q3E8GnkXNbuZ7D8y'",
               "2": "b'GKot5hBsd81kMupNCXHaqbhv3huEbxAFMLnpcX2hniwn'",
               "1": "b'DJLzEifT7n9DbiCHqQ5KWrWUPFBiZt349popapDfzo5p'"
@@ -1222,48 +1168,30 @@
                   ]
                 },
                 "0": {
-                  "Node3": [
+                  "Node2": [
                     null,
                     null
                   ],
-                  "Node2": [
+                  "Node3": [
                     null,
                     null
                   ]
                 },
-                "2": {
-                  "Node3": [
-                    null,
-                    null
-                  ],
-                  "Node2": [
-                    null,
-                    null
-                  ]
-                },
-                "1": {
-                  "Node2": [
-                    null,
-                    null
-                  ],
-                  "Node3": [
-                    null,
-                    null
-                  ]
-                }
+                "2": {},
+                "1": {}
               }
             },
             "Freshness_status": {
               "0": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "1": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               },
               "2": {
-                "Last_updated_time": "2022-06-21 14:27:43+00:00",
+                "Last_updated_time": "2022-06-21 18:31:39+00:00",
                 "Has_write_consensus": true
               }
             },
@@ -1275,10 +1203,10 @@
             "Replicas_status": {
               "Node4:0": {
                 "Primary": "Node1:0",
-                "Watermarks": "0:300",
+                "Watermarks": "51:351",
                 "Last_ordered_3PC": [
                   0,
-                  12
+                  87
                 ],
                 "Stashed_txns": {
                   "Stashed_checkpoints": 0,
@@ -1372,7 +1300,7 @@
             "indy-node": "1.12.4",
             "sovrin": "unknown"
           },
-          "Update_time": "Tuesday, June 21, 2022 2:28:41 PM +0000",
+          "Update_time": "Tuesday, June 21, 2022 6:33:37 PM +0000",
           "Memory_profiler": [],
           "Extractions": {
             "journalctl_exceptions": [
@@ -1386,6 +1314,22 @@
             ],
             "upgrade_log": "",
             "stops_stat": null
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "All-node-info",
+    "response": {
+      "op": "REPLY",
+      "result": {
+        "data": {
+          "Node_info": {
+            "Name": "All-node-info",
+            "Metrics": {
+              "average-read-transaction-time": "0.03578554835"
+            }
           }
         }
       }
