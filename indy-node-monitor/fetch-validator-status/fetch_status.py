@@ -24,7 +24,7 @@ from plugin_collection import PluginCollection
 from DidKey import DidKey
 from plugins import analysis
 verbose = False
-prometheus = True
+prometheus = False
 label = "indy_node"
 
 def log(*args):
@@ -392,6 +392,9 @@ if __name__ == "__main__":
     verbose = args.verbose
 
     monitor_plugins.load_all_parse_args(args)
+
+    if args.prometheus:
+        prometheus = True
 
     if args.list_nets:
         print(json.dumps(load_network_list(), indent=2))
