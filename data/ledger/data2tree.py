@@ -1,7 +1,5 @@
 from __future__ import print_function
 import json
-import sys
-import pygraphviz as pgv
 
 data = {}
 # Open JSON file

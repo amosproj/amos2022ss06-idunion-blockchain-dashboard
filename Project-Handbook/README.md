@@ -32,3 +32,5 @@ Here you can find all the technical information and set-up guides related to our
     - This folder contains Grafana dashboards and a util directory with a python script that will take some of the output from run.sh (../fetch-validator-status/run.sh) and convert it to prometheus style output so that it can be read in and displayed in Grafana. The dashboards display Indy Network administrator type output that is useful for monitoring the status of an Indy Network as a whole and how well the indy-node software is running on each node.
   - [IDunion Blockchain Dashboard](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/main/Documentation/README.md)
     - Guide to set up Grafana and Prometheus by using de docker files given in the repository.
+  - [JSON Tree Visualizer](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/tree/main/data/vtree-master)
+    - This tool converts JSON strings into tree diagrams. For example, it is used to show AST(Abstract Syntax Tree) as tree diagrams for debugging. In that case, of course, you need to translate AST into JSON.

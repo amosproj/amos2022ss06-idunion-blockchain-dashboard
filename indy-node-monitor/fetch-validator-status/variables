@@ -1,7 +1,4 @@
 #!/bin/bash
 
-URL="http://172.17.0.1:9000/genesis"
-SEED=000000000000000000000000Trustee1
-SAMPLES=60
 VON_NET_DIR="../../../von-network"
 AMOS_PROJ_DIR="../amos2022ss06-idunion-blockchain-dashboard"
