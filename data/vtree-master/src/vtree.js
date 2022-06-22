@@ -13,12 +13,12 @@ import ObjectReader from './reader/object.js';
 import { visitAfter } from './util.js';
 
 
-const WIDTH = 2000;
-const HEIGHT = 1600;
+const WIDTH = 3000;
+const HEIGHT = 2200;
 const MARGIN = 20;
 
-const DEFAULT_TREE_LAYOUT_HEIGHT = 50;
-const DEBUG_TREE_LAYOUT_HEIGHT = 100;
+const DEFAULT_TREE_LAYOUT_HEIGHT = 500;
+const DEBUG_TREE_LAYOUT_HEIGHT = 1000;
 
 const style = `
 .vtree-node text { font: 14px sans-serif; }
