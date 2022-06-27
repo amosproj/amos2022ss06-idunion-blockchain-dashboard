@@ -8,9 +8,11 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - type: bind
-        source: ./data/grafana
-        target: /grafana/static-data
+      - ./data/grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./data/grafana:/var/lib/grafana
+#      - type: bind
+#        source: ./data/grafana
+#        target: /grafana/static-data
 
   prometheus:
     #    network_mode: host

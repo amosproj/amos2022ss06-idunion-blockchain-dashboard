@@ -87,6 +87,8 @@ then
 	net=""
 fi
 
+sudo chmod -R 777 ${AMOS_PROJ_DIR}/data/grafana/
+
 ## building grafana and prometheus docker container
 if $docker
 then
