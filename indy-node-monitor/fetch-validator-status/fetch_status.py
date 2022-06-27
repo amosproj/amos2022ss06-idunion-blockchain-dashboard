@@ -143,6 +143,8 @@ def output_prometheus(data_json):
                 break
             except KeyError:
                 pass
+    file = open("global_var_p.txt", "r")
+    print(file.read())
 
 def process_data_prometheus_1_5(data):
     node_info = data['Node_info']
@@ -315,8 +317,6 @@ def process_data_prometheus_1_5(data):
             consensus=in_consensus
         )
     )
-    file = open("global_var_p.txt", "r")
-    print(file.read())
 
 def filter_timestamps(data):
     filtered=[]
