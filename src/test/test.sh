@@ -5,7 +5,7 @@ source variables
 
 ## function to loop the fetch_status_prometheus.py script for give sample size and export the data into a .prom file
 function act() {
-  python3 ./fetch_status_prometheus.py --genesis-url=${URL} --seed=${SEED} -p | tee ../../src/test/node_data.prom
+  python3 ./fetch_status.py --genesis-url=${URL} --seed=${SEED} -p | tee ../../src/test/test_data.prom
 }
 
 function assert() {

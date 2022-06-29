@@ -44,38 +44,6 @@ class main(plugin_collection.Plugin):
 
         average = sum / count
 
-        # for node in result:
-        #     if "response" in node:
-        #         node["response"]["result"]["data"]["Node_info"]["Metrics"]["average-read-transaction-time"] = average
-
-        # all_node_info = {
-        #     "name": "All-node-info",
-        #     "response" : {
-        #         "average-read-transaction-time" : str(average)
-        #     }
-        # }
-
-        # all_node_info = {
-        #     "name": "All-node-info",
-        #     "response": {
-        #         "op" : "REPLY",
-        #         "result": {
-        #             "data": {
-        #                 "Node_info": {
-        #                     "Name" : "All-node-info",
-        #                     "Metrics": {
-        #                         "average-read-transaction-time": str(average)
-        #                     }
-        #                 }
-        #             }
-        #         }
-        #     }
-        # }
-
-        # parser2 = argparse.ArgumentParser()
-        # options = parser2.parse_args()
-        #cur_path = os.path.dirname(__file__)
-        #new_path = os.path.relpath('..//plugin//global_var_p.txt', cur_path)
         f = open("global_var_p.txt", "r")
         p = f.read()
         if "True" in p:

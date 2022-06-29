@@ -1,1 +1,1 @@
-indy_read_transaction_time_all_node{node_name="All_node_info",source="indy_node"} 0.036439396675
+indy_read_transaction_time_all_node{node_name="All_node_info",source="indy_node"} 0.03530426842500001
