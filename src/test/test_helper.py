@@ -14,3 +14,11 @@ def get_list_line_from_kpi(data_file, kpi):
             if kpi in line:
                 res.append(line)
     return res
+
+def get_list_line_from_kpi_with_ident(data_file, kpi, ident):
+    res = []
+    with open(data_file, 'r') as f:
+        for line in f:
+            if kpi in line and ident in line:
+                res.append(line)
+    return res
