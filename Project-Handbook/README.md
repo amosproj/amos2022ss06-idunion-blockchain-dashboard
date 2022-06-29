@@ -20,6 +20,9 @@ Here you can find all the general information related to our **AMOS IDunion proj
 
 ## Engineering
 Here you can find all the technical information and set-up guides related to our **AMOS IDunion project**.
+  -[Setup Script]()
+    - A bash script for running the docker image of prometheus and grafana, node exporter and fetch_validator_status python script in a loop for the specified duration
+
   - [Indy Getting Started](https://hyperledger-indy.readthedocs.io/projects/sdk/en/latest/docs/getting-started/run-getting-started.html)
     - This is a simple way to test your set-up by using docker and git. 
   - [Indy Node Monitor](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/tree/main/indy-node-monitor)
