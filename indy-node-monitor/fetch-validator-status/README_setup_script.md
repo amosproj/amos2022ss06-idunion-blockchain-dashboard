@@ -36,6 +36,10 @@ and sample size
 bash setup_script.sh -d -n NET -i SAMPLES -p
 ```
 
+For converting a local json file to prometheus along with running docker
+```bash
+bash setup_script.sh -d -l JSON_FILE  
+```
 ### Ports of Grafana, Prometheus and node_exporter
 Grafana: 3000 \
 Prometheus: 9090 \
