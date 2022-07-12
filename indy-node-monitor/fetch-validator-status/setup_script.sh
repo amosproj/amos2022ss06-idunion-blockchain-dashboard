@@ -18,7 +18,7 @@ function usage()
 {
    cat << HEREDOC
 
-   Usage: $progname [--net NET] [--genesis-url URL] [--seed SEED] [--samples SAMPLES] [--prometheus] [--docker-setup] [--verbose]
+   Usage: $progname [--net NET] [--genesis-url URL] [--seed SEED] [--samples SAMPLES] [--local JSON-LOCATION] [--prometheus] [--docker-setup] [--verbose]
 
    optional arguments:
      -h, --help			show this help message and exit
@@ -29,6 +29,7 @@ function usage()
      -p, --prometheus		output in prometheus format
      -d, --docker-setup		run the docker setup for prometheus and grafana if not already running
      -v, --verbose		increase the verbosity of the script
+     -l, --local                convert the local json file to prometheus
 
 HEREDOC
 }  
@@ -46,11 +47,13 @@ genesis_url=""
 seed="000000000000000000000000Trustee1"
 samples=120
 net="bct"
+json_location=""
 docker=false
 verbose=0
+local=false
 #node_exporter="False"
 
-OPTS=$(getopt -o "hn:u:s:i:pdv" --long "help,net:,genesis-url:,seed:,samples:,prometheus,docker-setup,verbose" -n "$progname" -- "$@")
+OPTS=$(getopt -o "hn:u:s:i:l:pdv" --long "help,net:,genesis-url:,seed:,samples:,local:,prometheus,docker-setup,verbose" -n "$progname" -- "$@")
 if [ $? != 0 ] ; then echo "Error in command line arguments." >&2 ; usage; exit 1 ; fi
 eval set -- "$OPTS"
 
@@ -63,6 +66,7 @@ while true; do
     -u | --genesis-url ) genesis_url="$2"; shift 2 ;;
     -s | --seed ) seed="$2"; shift 2 ;;
     -i | --samples ) samples="$2"; shift 2 ;;	  
+    -l | --local ) local=true ; json_location="$2" ; shift 2;;
     -p | --prometheus ) prometheus="-p"; shift ;;
     -d | --docker-setup ) docker=true ; shift ;;
     -v | --verbose ) verbose=$((verbose + 1)); shift ;;
@@ -111,7 +115,12 @@ do
     xdg-open $link
 done
 
-
-## fetch the node metrics into the .prom file by running the above defined prom_data_loop function
-cd ../fetch-validator-status/
-prom_data_loop ${samples}
+if $local
+then
+  cd ${AMOS_PROJ_DIR}/indy-node-monitor/fetch-validator-status/
+  python3 convert_json_to_prometheus.py ${json_location}
+else
+  ## fetch the node metrics into the .prom file by running the above defined prom_data_loop function
+  cd ${AMOS_PROJ_DIR}/indy-node-monitor/fetch-validator-status/
+  prom_data_loop ${samples}
+fi
