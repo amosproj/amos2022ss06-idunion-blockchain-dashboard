@@ -28,3 +28,7 @@ firefox http://172.17.0.1:3000 http://172.17.0.1:9090/targets http://172.17.0.1:
 - Choose Prometheus database
 - Paste the copied URL in format http://URL:9090
 - Click save and test
+
+### Convert local json file into prometheus format
+- Run command:  ./convert_json_to_prometheus.py $FILE_NAME
+- Add redirect "> ../../data/prometheus/node_data.prom" to the end if you want to save it to database
