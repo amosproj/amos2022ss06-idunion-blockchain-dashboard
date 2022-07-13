@@ -102,7 +102,7 @@ fi
 #if $node_exporter
 #then
 	cd ${AMOS_PROJ_DIR}/indy-node-monitor/node_exp*
-	gnome-terminal -- node_exporter --collector.disable-defaults --collector.textfile.directory=${AMOS_PROJ_DIR}"/data/prometheus/" --collector.textfile
+	gnome-terminal -- ./node_exporter --collector.disable-defaults --collector.textfile.directory=${AMOS_PROJ_DIR}"/data/prometheus/" --collector.textfile
 #fi
 
 ## open the browser tabs for grafana, prometheus and node exporter 
