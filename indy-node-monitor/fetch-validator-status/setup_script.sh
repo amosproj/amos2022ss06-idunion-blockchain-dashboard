@@ -118,7 +118,7 @@ done
 if $local
 then
   cd ${AMOS_PROJ_DIR}/indy-node-monitor/fetch-validator-status/
-  python3 convert_json_to_prometheus.py ${json_location}
+  python3 convert_json_to_prometheus.py ${json_location} | tee ${AMOS_PROJ_DIR}/data/prometheus/node_data.prom
 else
   ## fetch the node metrics into the .prom file by running the above defined prom_data_loop function
   cd ${AMOS_PROJ_DIR}/indy-node-monitor/fetch-validator-status/
