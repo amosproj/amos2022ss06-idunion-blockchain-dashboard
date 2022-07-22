@@ -110,7 +110,7 @@ fi
 #fi
 
 ## open the browser tabs for grafana, prometheus and node exporter 
-for link in $(echo http://172.17.0.1:3000 http://172.17.0.1:9090/targets http://172.17.0.1:9100/metrics )
+for link in $(echo http://172.17.0.1:3000 http://172.17.0.1:9090/targets http://172.17.0.1:9100/metrics http://172.17.0.1:3000/d/rLlJXxR4k/idunion-blockchain-dashboard?orgId=1)
 do
     xdg-open $link
 done
