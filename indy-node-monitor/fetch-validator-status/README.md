@@ -130,6 +130,8 @@ If running in the browser, you will have to get the URL for the Genesis file (as
 
 You should see a very long JSON structure printed to the terminal. You can redirect the output to a file by adding something like `> good.json` at the end of the command.
 
+Add redirect "> ../../data/prometheus/node_data.prom" to the end if you want to save it to database
+
 If you use the Seed of a DID that does not have permission to see validator info, you will get a much shorter JSON structure containing access denied messages.
 
 
