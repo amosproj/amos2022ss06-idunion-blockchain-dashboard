@@ -23,6 +23,7 @@ indy_reachable{node="DATEV01",node_name=".msg",source="indy_node"} 0
 indy_reachable_nodes_count{node_name=".msg",source="indy_node"} 17
 indy_sovrin_version{version="unknown",node_name=".msg",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name=".msg",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-1128-aws-x86_64-with-Ubuntu-16.04-xenial",node_name=".msg",source="indy_node"} 0
 indy_node_current_timestamp{node_name=".msg",source="indy_node"} 1654698011000
 indy_omega{node_name=".msg",source="indy_node"} 20.0
 indy_delta{node_name=".msg",source="indy_node"} 0.1
@@ -69,6 +70,7 @@ indy_reachable{node="tubzecm",node_name="Bosch",source="indy_node"} 1
 indy_unreachable_nodes_count{node_name="Bosch",source="indy_node"} 0
 indy_sovrin_version{version="unknown",node_name="Bosch",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="Bosch",source="indy_node"} 0
+indy_os_version{version="Linux-4.15.0-1113-azure-x86_64-with-Ubuntu-16.04-xenial",node_name="Bosch",source="indy_node"} 0
 indy_node_current_timestamp{node_name="Bosch",source="indy_node"} 1654698011000
 indy_ordered_request_durations{node_name="Bosch",source="indy_node",ident="0"} 785.8248204105
 indy_master_throughput{node_name="Bosch",source="indy_node"} 2.598e-07
@@ -115,6 +117,7 @@ indy_total_nodes_count{node_name="Bundesdruckerei",source="indy_node"} 18
 indy_reachable_nodes_count{node_name="Bundesdruckerei",source="indy_node"} 18
 indy_sovrin_version{version="unknown",node_name="Bundesdruckerei",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="Bundesdruckerei",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-210-generic-x86_64-with-Ubuntu-16.04-xenial",node_name="Bundesdruckerei",source="indy_node"} 0
 indy_node_current_timestamp{node_name="Bundesdruckerei",source="indy_node"} 1654698011000
 indy_throughput{node_name="Bundesdruckerei",source="indy_node",ident="0"} 2.293e-07
 indy_total_requests{node_name="Bundesdruckerei",source="indy_node"} 1594.0
@@ -161,6 +164,7 @@ indy_reachable{node="siemens",node_name="Commerzbank",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="Commerzbank",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="Commerzbank",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="Commerzbank",source="indy_node"} 0
+indy_os_version{version="Linux-4.15.0-1098-azure-x86_64-with-Ubuntu-16.04-xenial",node_name="Commerzbank",source="indy_node"} 0
 indy_node_current_timestamp{node_name="Commerzbank",source="indy_node"} 1654698011000
 indy_omega{node_name="Commerzbank",source="indy_node"} 20.0
 indy_master_throughput{node_name="Commerzbank",source="indy_node"} 2.598e-07
@@ -207,6 +211,7 @@ indy_reachable{node="siemens",node_name="DeutscheBahn",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="DeutscheBahn",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="DeutscheBahn",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="DeutscheBahn",source="indy_node"} 0
+indy_os_version{version="Linux-5.10.112-108.499.amzn2.x86_64-x86_64-with-Ubuntu-18.04-bionic",node_name="DeutscheBahn",source="indy_node"} 0
 indy_node_current_timestamp{node_name="DeutscheBahn",source="indy_node"} 1654698011000
 indy_instances_started{node_name="DeutscheBahn",source="indy_node",ident="0"} 35.404665237
 indy_instances_started{node_name="DeutscheBahn",source="indy_node",ident="1"} 35.408252694
@@ -275,6 +280,7 @@ indy_reachable{node="siemens",node_name="GS1Germany",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="GS1Germany",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="GS1Germany",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="GS1Germany",source="indy_node"} 0
+indy_os_version{version="Linux-4.19.0-18-amd64-x86_64-with-debian-10.11",node_name="GS1Germany",source="indy_node"} 0
 indy_node_current_timestamp{node_name="GS1Germany",source="indy_node"} 1654698011000
 indy_throughput{node_name="GS1Germany",source="indy_node",ident="0"} 2.598e-07
 indy_master_throughput{node_name="GS1Germany",source="indy_node"} 2.598e-07
@@ -321,6 +327,7 @@ indy_reachable_nodes_count{node_name="ING",source="indy_node"} 18
 indy_total_nodes_count{node_name="ING",source="indy_node"} 18
 indy_sovrin_version{version="unknown",node_name="ING",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="ING",source="indy_node"} 0
+indy_os_version{version="Linux-4.15.0-1113-azure-x86_64-with-Ubuntu-16.04-xenial",node_name="ING",source="indy_node"} 0
 indy_node_current_timestamp{node_name="ING",source="indy_node"} 1654698011000
 indy_master_throughput{node_name="ING",source="indy_node"} 2.598e-07
 indy_client_avg_request_latencies{node_name="ING",source="indy_node",ident="0"} 1.4801375414
@@ -367,6 +374,7 @@ indy_total_nodes_count{node_name="MainIncubator",source="indy_node"} 18
 indy_unreachable_nodes_count{node_name="MainIncubator",source="indy_node"} 0
 indy_sovrin_version{version="unknown",node_name="MainIncubator",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="MainIncubator",source="indy_node"} 0
+indy_os_version{version="Linux-4.15.0-1091-gcp-x86_64-with-Ubuntu-16.04-xenial",node_name="MainIncubator",source="indy_node"} 0
 indy_node_current_timestamp{node_name="MainIncubator",source="indy_node"} 1654698011000
 indy_omega{node_name="MainIncubator",source="indy_node"} 20.0
 indy_delta{node_name="MainIncubator",source="indy_node"} 0.1
@@ -413,6 +421,7 @@ indy_reachable{node="tubzecm",node_name="Spherity_GmbH",source="indy_node"} 1
 indy_unreachable_nodes_count{node_name="Spherity_GmbH",source="indy_node"} 0
 indy_sovrin_version{version="unknown",node_name="Spherity_GmbH",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="Spherity_GmbH",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-1119-aws-x86_64-with-Ubuntu-16.04-xenial",node_name="Spherity_GmbH",source="indy_node"} 0
 indy_node_current_timestamp{node_name="Spherity_GmbH",source="indy_node"} 1654698011000
 indy_uptime{node_name="Spherity_GmbH",source="indy_node"} 8653423.0
 indy_ordered_request_durations{node_name="Spherity_GmbH",source="indy_node",ident="0"} 753.9191245139
@@ -459,6 +468,7 @@ indy_reachable{node="tubzecm",node_name="T-Labs",source="indy_node"} 1
 indy_total_nodes_count{node_name="T-Labs",source="indy_node"} 18
 indy_sovrin_version{version="unknown",node_name="T-Labs",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="T-Labs",source="indy_node"} 0
+indy_os_version{version="Linux-4.15.0-184-generic-x86_64-with-Ubuntu-18.04-bionic",node_name="T-Labs",source="indy_node"} 0
 indy_node_current_timestamp{node_name="T-Labs",source="indy_node"} 1654698011000
 indy_ordered_request_durations{node_name="T-Labs",source="indy_node",ident="0"} 11.198739514
 indy_ordered_request_durations{node_name="T-Labs",source="indy_node",ident="1"} 0.0
@@ -525,6 +535,7 @@ indy_reachable{node="siemens",node_name="esatus_AG",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="esatus_AG",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="esatus_AG",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="esatus_AG",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-210-generic-x86_64-with-Ubuntu-16.04-xenial",node_name="esatus_AG",source="indy_node"} 0
 indy_node_current_timestamp{node_name="esatus_AG",source="indy_node"} 1654698011000
 indy_omega{node_name="esatus_AG",source="indy_node"} 20.0
 indy_transaction_count{node_name="esatus_AG",source="indy_node",ident="ledger"} 12544.0
@@ -593,6 +604,7 @@ indy_reachable{node="siemens",node_name="ifis",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="ifis",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="ifis",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="ifis",source="indy_node"} 0
+indy_os_version{version="Linux-4.18.0-348.20.1.el8_5.x86_64-x86_64-with-Ubuntu-18.04-bionic",node_name="ifis",source="indy_node"} 0
 indy_node_current_timestamp{node_name="ifis",source="indy_node"} 1654698011000
 indy_ordered_request_durations{node_name="ifis",source="indy_node",ident="0"} 839.7532101804
 indy_ordered_request_counts{node_name="ifis",source="indy_node",ident="0"} 1703.0
@@ -639,6 +651,7 @@ indy_reachable{node="siemens",node_name="mgm_tp",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="mgm_tp",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="mgm_tp",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="mgm_tp",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-211-generic-x86_64-with-Ubuntu-16.04-xenial",node_name="mgm_tp",source="indy_node"} 0
 indy_node_current_timestamp{node_name="mgm_tp",source="indy_node"} 1654698011000
 indy_instances_started{node_name="mgm_tp",source="indy_node",ident="0"} 16455807.23766299
 indy_transaction_count{node_name="mgm_tp",source="indy_node",ident="ledger"} 12544.0
@@ -685,6 +698,7 @@ indy_reachable{node="tubzecm",node_name="regio_iT",source="indy_node"} 1
 indy_total_nodes_count{node_name="regio_iT",source="indy_node"} 18
 indy_sovrin_version{version="unknown",node_name="regio_iT",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="regio_iT",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-31-generic-x86_64-with-Ubuntu-16.04-xenial",node_name="regio_iT",source="indy_node"} 0
 indy_node_current_timestamp{node_name="regio_iT",source="indy_node"} 1654698011000
 indy_transaction_count{node_name="regio_iT",source="indy_node",ident="pool"} 26.0
 indy_transaction_count{node_name="regio_iT",source="indy_node",ident="config"} 132.0
@@ -731,6 +745,7 @@ indy_reachable{node="siemens",node_name="siemens",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="siemens",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="siemens",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="siemens",source="indy_node"} 0
+indy_os_version{version="Linux-5.13.0-1025-aws-x86_64-with-Ubuntu-18.04-bionic",node_name="siemens",source="indy_node"} 0
 indy_node_current_timestamp{node_name="siemens",source="indy_node"} 1654698011000
 indy_transaction_count{node_name="siemens",source="indy_node",ident="pool"} 26.0
 indy_transaction_count{node_name="siemens",source="indy_node",ident="config"} 132.0
@@ -799,6 +814,7 @@ indy_reachable{node="siemens",node_name="tubzecm",source="indy_node"} 1
 indy_reachable{node="tubzecm",node_name="tubzecm",source="indy_node"} 1
 indy_sovrin_version{version="unknown",node_name="tubzecm",source="indy_node"} 0
 indy_node_version{version="1.12.4",node_name="tubzecm",source="indy_node"} 0
+indy_os_version{version="Linux-4.4.0-210-generic-x86_64-with-Ubuntu-16.04-xenial",node_name="tubzecm",source="indy_node"} 0
 indy_node_current_timestamp{node_name="tubzecm",source="indy_node"} 1654698011000
 indy_ordered_request_durations{node_name="tubzecm",source="indy_node",ident="0"} 786.0622184034
 indy_throughput{node_name="tubzecm",source="indy_node",ident="0"} 2.598e-07
