@@ -18,19 +18,24 @@ This is a simple tool that can be used to retrieve "validator-info"&mdash;detail
 - JSON array with a record per validator (default)
 - Prometheus format (with option -p)
 
-For more details see the Fetch Validator Status [readme](fetch-validator-status/README.orig.md)
+For more details see the Fetch Validator Status [readme](fetch-validator-status/README.md)
 
 ## Authors
-- The code of this repository is forked from https://github.com/lynnbendixsen/indy-node-monitor (Lynn Bendixsen and contributors).
+- The code of this repository is forked from https://github.com/IDunion/indy-node-monitor.
 The original README.md can be seen in README.orig.md.
 
+- The prometheus export function code has been adapted from the unmerged pull request #6:
+https://github.com/hyperledger/indy-node-monitor/pull/6 (Kevin Wittek)
+
+- The adaptation and bug fixes were done by Carlos Morra, Siemens AG.
+
 ## Installation and configuration: 
-See [setup](setup_IDUnion_node_monitoring.md) and [install indy vdr](install_indy-vdr.md).
+See [setup](../indy-node-monitor/setup_IDUnion_node_monitoring.md) and [install indy vdr](install_indy-vdr.md).
 
 ## Code of Conduct
 
-All contributors are required to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) guidelines.
+All contributors are required to adhere to our [Code of Conduct](../indy-node-monitor/CODE_OF_CONDUCT.md) guidelines.
 
 ## License
 
-[Apache License Version 2.0](LICENSE)
+[Apache License Version 2.0](grafana/LICENSE)
