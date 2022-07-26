@@ -1,99 +1,95 @@
 #!/usr/bin/env python3
 import argparse
-import subprocess
+import asyncio
+# import base58
+# import base64
 import json
-import sys
-import re
-import time
 import os
-
+import sys
+import datetime
+import urllib.request
+from typing import Tuple
+import re
+import nacl.signing
+import time
+import indy_vdr
+from indy_vdr.ledger import (
+    build_get_validator_info_request,
+    build_get_txn_request,
+    # Request,
+)
+from indy_vdr.pool import open_pool
+from plugin_collection import PluginCollection
+# import time
+from DidKey import DidKey
+from plugins import analysis
+verbose = False
+prometheus = False
 label = "indy_node"
-def filter_timestamps(data):
-    filtered=[]
-    for l in data.splitlines():
-        if re.match(r'^[0-9]{4}-[0-1][0-9]-[0-3][0-9] [0-2][0-9]:[0-6][0-9]:[0-6][0-9],[0-9]+ .*',l):
-            continue              
-        filtered.append(l)
-    return ''.join(filtered)
 
-def flatten_dict(d,separator='.',parent_key=''):
-    items=[]
-    try:
-        d_items = d.items()
-    except AttributeError:
-        i=0
-        for e in d:
-            new_key = '{}'.format(i)
-            if isinstance(e,str):
-                items.append((new_key,e))
-            elif isinstance(e,float):
-                items.append((new_key,e))
-            elif isinstance(e,int):
-                items.append((new_key,e))
-            else:
-                items.extend(
-                    flatten_dict(e,separator=separator,parent_key=new_key).items()
-                )
-            i+=1
-        return dict(items)
-    for k, v in d_items:
-        if parent_key:
-            new_key = '{}{}{}'.format(parent_key,separator,k)
-        else:
-            new_key = k
-        if isinstance(v,dict):
-            items.extend(
-                flatten_dict(v,separator=separator,parent_key=new_key).items()
-            )
-        elif isinstance(v,list):
-            org_key=new_key
-            i=0
-            for e in v:
-                new_key = '{}{}{}'.format(org_key,separator,i)
-                if isinstance(e,str):
-                    items.append((new_key,e))
-                elif isinstance(e,float):#.split('{',1)[1]))
-                    items.append((new_key,e))
-                elif isinstance(e,int):
-                    items.append((new_key,e))
-                else:
-                    items.extend(
-                        flatten_dict(e,separator=separator,parent_key=new_key).items()
-                    )
-                i+=1
-        else:
-            items.append((new_key,v))
-    return dict(items)
+def output_prometheus(data_json):
+    all_node_data = json.loads(filter_timestamps(data_json.replace("\r\n", "")))
 
-def _get_metrics_live(GENESIS_URL, SEED):
-    try:
-        my_env = os.environ.copy()
-        my_env["GENESIS_URL"] =  GENESIS_URL
-        my_env["SEED"] = SEED  
-        proc = subprocess.Popen(["/home/ubuntu/github/indy-node-monitor/fetch-validator-status/run.sh"],env=my_env,cwd=r'/home/ubuntu/github/indy-node-monitor/fetch-validator-status',stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-        ret = proc.communicate(timeout=100)
-        if proc.returncode != 0:
-            sys.stderr.write("ERROR occured running validator command\n")
-            sys.stderr.write("STDOUT:\n")
-            sys.stderr.write(ret[0].decode())
-            sys.stderr.write("STERR:\n")
-            sys.stderr.write(ret[1].decode())
-        else:
-            #Load Json
-            return json.loads(filter_timestamps(ret[0].decode().replace("\r\n","")))
-    except Exception as e:
-        exc_type, exc_value, exc_traceback = sys.exc_info()
-        exc_str = "{}: {}".format(exc_type.__name__,exc_value)
-        sys.stderr.write("Error executing validator-info: '{exc_str}'\n".format(exc_str=exc_str))
-        sys.stderr.write("validator-info output: {}".format(ret[0].decode().replace("\r\n","").split('{',1)[1]))
-        return None
+    all_node_data_size = len(data_json)
 
-def _process_1_5():
+    #  all_node_data = json.loads(filter_timestamps(str(data_json).replace("\r\n","")))
+
+    for node in all_node_data:
+        #        print(node["name"])
+        if ('response' not in node):
+            # Do some sort of metric stating "node not responding"?
+            continue
+        if (node['response']['op'] != "REPLY"):  # Skip nodes that dont  respond with REPLY
+            sys.stderr.write("Error: Node \"" + node['name'] + "\" responded with " + node['response']['op'])
+            continue
+        data = node['response']['result']['data']
+        if not data:
+            sys.stderr.write("Error: No data")
+            sys.exit(1)
+        try:
+            node_ver = data['Software']['indy-node']
+        except KeyError:
+            try:
+                node_ver = data['software']['indy-node']
+            except KeyError:
+                #        try:
+                #           cmd = ['/usr/bin/dpkg-query', '-f', "'${Version}\\n'", '-W', 'indy-node']
+                #     dpq = subprocess.Popen(cmd,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                #     dpq_out,dpq_stderr = dpq.communicate()
+                #     if dpq.returncode > 0:
+                #         sys.stderr.write(dpq_stderr)
+                #         sys.stderr.write("\nERROR: indy-node package isn't installed! Can't proceed\n")
+                #         sys.exit(2)
+                #     node_ver = dpq_out.decode()
+                # except subprocess.SubprocessError:
+                #     exc_type, exc_value, exc_traceback = sys.exc_info()
+                #     exc_str = "{}: {}".format(exc_type.__name__, exc_value)
+                #     sys.stderr.write("Subprocess Error during execution of command: {cmd} Error: '{exc_str}'".format(cmd=cmd, exc_str=exc_str))
+                #     sys.exit(2)
+                sys.stderr.write("Error: KeyError")
+                sys.exit(2)
+
+        print('indy_node_validator_info_size{source="indy-node"} ', all_node_data_size)
+
+        for v in [node_ver, '.'.join(node_ver.split('.')[:-1]), 'latest']:
+            try:
+                process_data_prometheus_1_5(data)
+                break
+            except KeyError:
+                pass
+    file = open("global_var_p.txt", "r")
+    print(file.read())
+    file = open("global_var_p.txt", "w")
+    file.write("")
+
+def process_data_prometheus_1_5(data):
     node_info = data['Node_info']
     node_name = node_info['Name']
     metrics = node_info['Metrics']
     pool_metrics = data['Pool_info']
     version_metrics = data['Software']
+    hardware_metrics = data['Hardware']
+
     #Process Pool related metrics
     for metric in pool_metrics:
         # If it is a "count" metric, assume that the value is a number and good to go
@@ -129,7 +125,7 @@ def _process_1_5():
                         value=val
                     )
                 )
-                if 0 == node[1]: 
+                if 0 == node[1]:
                     print('indy_primary_node{{node="{node}",node_name="{node_name}",source="{label}"}} {value}'.format(
                             node=node_real,
                             node_name=node_name,
@@ -152,6 +148,21 @@ def _process_1_5():
             label=label,
             value=0
         )
+    )
+    print('indy_os_version{{version="{version}",node_name="{node_name}",source="{label}"}} {value}'.format(
+        version=version_metrics['OS_version'],
+        node_name=node_name,
+        label=label,
+        value=0
+    )
+    )
+
+    #Print node hardware metric
+    print('indy_node_hdd_used{{node_name="{node_name}",source="{label}"}} {value}'.format(
+        node_name=node_name,
+        label=label,
+        value=hardware_metrics['HDD_used_by_node'].split()[0]
+    )
     )
 
     #Print timestamp metric directly
@@ -260,50 +271,65 @@ def _process_1_5():
         )
     )
 
-process_map = {
-    '1.5': _process_1_5,
-    'latest': _process_1_5
-}
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('GENESIS_URL', action="store")
-    parser.add_argument('SEED', action="store")
-    args = parser.parse_args()
-    
-    all_node_data = _get_metrics_live(args.GENESIS_URL,args.SEED)
-
-    for node in all_node_data: 
-        if 'response' not in node:
-            # Do some sort of metric stating "node not responding"?
+def filter_timestamps(data):
+    filtered=[]
+    for l in data.splitlines():
+        if re.match(r'^[0-9]{4}-[0-1][0-9]-[0-3][0-9] [0-2][0-9]:[0-6][0-9]:[0-6][0-9],[0-9]+ .*',l):
             continue
-        data = node['response']['result']['data']
-        if not data:
-            sys.exit(1)
-        try:
-            node_ver = data['Software']['indy-node']
-        except KeyError:
-            try:
-                node_ver = data['software']['indy-node']
-            except KeyError:
-                try:
-                    cmd = ['/usr/bin/dpkg-query', '-f', "'${Version}\\n'", '-W', 'indy-node']
-                    dpq = subprocess.Popen(cmd,shell=False,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-                    dpq_out,dpq_stderr = dpq.communicate()
-                    if dpq.returncode > 0:
-                        sys.stderr.write(dpq_stderr)
-                        sys.stderr.write("\nERROR: indy-node package isn't installed! Can't proceed\n")
-                        sys.exit(2) 
-                    node_ver = dpq_out.decode()
-                except subprocess.SubprocessError:
-                    exc_type, exc_value, exc_traceback = sys.exc_info()
-                    exc_str = "{}: {}".format(exc_type.__name__, exc_value)
-                    sys.stderr.write("Subprocess Error during execution of command: {cmd} Error: '{exc_str}'".format(cmd=cmd, exc_str=exc_str))
-                    sys.exit(2) 
-        for v in [ node_ver, '.'.join(node_ver.split('.')[:-1]), 'latest' ]:
-            try:
-                process_metrics = process_map[v]
-                break
-            except KeyError:
-                pass
-        process_metrics()
+        filtered.append(l)
+    return ''.join(filtered)
+
+def flatten_dict(d,separator='.',parent_key=''):
+    items=[]
+    try:
+        d_items = d.items()
+    except AttributeError:
+        i=0
+        for e in d:
+            new_key = '{}'.format(i)
+            if isinstance(e,str):
+                items.append((new_key,e))
+            elif isinstance(e,float):
+                items.append((new_key,e))
+            elif isinstance(e,int):
+                items.append((new_key,e))
+            else:
+                items.extend(
+                    flatten_dict(e,separator=separator,parent_key=new_key).items()
+                )
+            i+=1
+        return dict(items)
+    for k, v in d_items:
+        if parent_key:
+            new_key = '{}{}{}'.format(parent_key,separator,k)
+        else:
+            new_key = k
+        if isinstance(v,dict):
+            items.extend(
+                flatten_dict(v,separator=separator,parent_key=new_key).items()
+            )
+        elif isinstance(v,list):
+            org_key=new_key
+            i=0
+            for e in v:
+                new_key = '{}{}{}'.format(org_key,separator,i)
+                if isinstance(e,str):
+                    items.append((new_key,e))
+                elif isinstance(e,float):#.split('{',1)[1]))
+                    items.append((new_key,e))
+                elif isinstance(e,int):
+                    items.append((new_key,e))
+                else:
+                    items.extend(
+                        flatten_dict(e,separator=separator,parent_key=new_key).items()
+                    )
+                i+=1
+        else:
+            items.append((new_key,v))
+    return dict(items)
+
+if __name__ == "__main__":
+    file_name = sys.argv[1]
+    f = open(file_name)
+    data = f.read()
+    output_prometheus(data)
