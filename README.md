@@ -27,5 +27,5 @@ The goal of the project is to develop a metrics engine and a dashboard for the I
 The picture above describes the planned architecture on a high-level basis. More detailed architecture information can be found [here](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/main/Documentation/software-architecture.pdf).
 
 ## Documentation
-All documentation can be found in our [Project-Handbook](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/blob/main/Project-Handbook) and is updated continuously by all team members.
+All documentation can be found in our [Wiki](https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard/wiki) and is updated continuously by all team members.
 
