@@ -181,6 +181,8 @@ def process_data_prometheus_1_5(data):
     metrics = node_info['Metrics']
     pool_metrics = data['Pool_info']
     version_metrics = data['Software']
+    hardware_metrics = data['Hardware']
+
     #Process Pool related metrics
     for metric in pool_metrics:
         # If it is a "count" metric, assume that the value is a number and good to go
@@ -255,6 +257,14 @@ def process_data_prometheus_1_5(data):
             label=label,
             value=data['timestamp']*1000
         )
+    )
+
+    #Print node hardware metric
+    print('indy_node_hdd_used{{node_name="{node_name}",source="{label}"}} {value}'.format(
+        node_name=node_name,
+        label=label,
+        value=hardware_metrics['HDD_used_by_node']
+    )
     )
 
     #Process general Metrics
