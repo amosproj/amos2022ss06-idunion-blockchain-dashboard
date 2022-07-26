@@ -1,5 +1,5 @@
 #!/bin/bash
 
-VON_NET_DIR=$(pwd)/../../../von-network
+VON_NET_DIR=$(pwd)/../../von-network
 #AMOS_PROJ_DIR="../amos2022ss06-idunion-blockchain-dashboard"
 AMOS_PROJ_DIR=$(pwd)/../..
