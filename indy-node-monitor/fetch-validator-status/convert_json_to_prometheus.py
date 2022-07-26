@@ -147,6 +147,13 @@ def process_data_prometheus_1_5(data):
             value=0
         )
     )
+    print('indy_os_version{{version="{version}",node_name="{node_name}",source="{label}"}} {value}'.format(
+        version=version_metrics['OS_version'],
+        node_name=node_name,
+        label=label,
+        value=0
+    )
+    )
 
     #Print timestamp metric directly
     print('indy_node_current_timestamp{{node_name="{node_name}",source="{label}"}} {value}'.format(
