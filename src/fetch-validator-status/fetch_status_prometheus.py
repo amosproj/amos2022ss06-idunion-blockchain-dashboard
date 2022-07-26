@@ -263,7 +263,7 @@ def process_data_prometheus_1_5(data):
     print('indy_node_hdd_used{{node_name="{node_name}",source="{label}"}} {value}'.format(
         node_name=node_name,
         label=label,
-        value=hardware_metrics['HDD_used_by_node']
+        value=hardware_metrics['HDD_used_by_node'].split()[0]
     )
     )
 
