@@ -105,7 +105,7 @@ fi
 ## open the node exporter in another terminal for easy exit when necessary
 #if $node_exporter
 #then
-	cd ${AMOS_PROJ_DIR}/indy-node-monitor/node_exp*
+	cd ${AMOS_PROJ_DIR}/src/node_exp*
 	gnome-terminal -- ./node_exporter --collector.disable-defaults --collector.textfile.directory=${AMOS_PROJ_DIR}"/data/prometheus/" --collector.textfile
 #fi
 
@@ -119,10 +119,10 @@ xdg-open http://172.17.0.1:3000/d/rLlJXxR4k/idunion-blockchain-dashboard?orgId=1
 
 if $local
 then
-  cd ${AMOS_PROJ_DIR}/indy-node-monitor/fetch-validator-status/
+  cd ${AMOS_PROJ_DIR}/src/fetch-validator-status/
   python3 convert_json_to_prometheus.py ${json_location} | tee ${AMOS_PROJ_DIR}/data/prometheus/node_data.prom
 else
   ## fetch the node metrics into the .prom file by running the above defined prom_data_loop function
-  cd ${AMOS_PROJ_DIR}/indy-node-monitor/fetch-validator-status/
+  cd ${AMOS_PROJ_DIR}/src/fetch-validator-status/
   prom_data_loop ${samples}
 fi
