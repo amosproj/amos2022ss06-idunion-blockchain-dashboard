@@ -27,10 +27,6 @@ The original README.md can be seen in README.orig.md.
 ## Installation and configuration: 
 See [setup](setup_IDUnion_node_monitoring.md) and [install indy vdr](install_indy-vdr.md).
 
-## Code of Conduct
-
-All contributors are required to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) guidelines.
-
 ## License
 
 [Apache License Version 2.0](LICENSE)
