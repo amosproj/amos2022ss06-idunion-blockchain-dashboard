@@ -55,7 +55,7 @@ Run these commands to clone this repo so that you can run the fetch validator in
 
 ```bash
 git clone https://github.com/amosproj/amos2022ss06-idunion-blockchain-dashboard.git
-cd amos2022ss06-idunion-blockchain-dashboard/indy-node-monitor/fetch-validator-status
+cd amos2022ss06-idunion-blockchain-dashboard/src/fetch-validator-status
 
 ```
 
