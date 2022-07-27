@@ -8,7 +8,7 @@
 
 In the interest of our industry partner the mission is to identify data of possible interest and display it in a dashboard. 
 By displaying the data in the dashboard it is easy and intuitive to get the impression of the network activity and ledger status. 
-Based on the displayed information the industry partner can optimize it´s businesses.
+Based on the displayed information the industry partner can optimize its businesses.
 
 The goal of the project was to develop a metrics engine and a dashboard for the IDunion blockchain.
 1. The (UI-less) metrics engine
